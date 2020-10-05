@@ -11,12 +11,14 @@ React app for browsing mixed drinks, filtering them by ingridient, displaying ea
 ## API
 
 https://www.thecocktaildb.com/api.php
+https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka
+https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007
 
 ## Wireframes
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-[Architecture & Time complexity diagram](https://i.imgur.com/5utKl4J.jpg)
+[Architecture & Time complexity diagram](https://i.imgur.com/5utKl4J.jpg)  
 [Wireframes](https://i.imgur.com/eZVA4TN.jpg)
 
 
