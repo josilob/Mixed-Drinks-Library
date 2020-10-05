@@ -1,68 +1,89 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Overview
 
-## Available Scripts
+## Project Links
 
-In the project directory, you can run:
+// Not deployed yet
 
-### `npm start`
+## Project Description
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+React app for browsing mixed drinks, filtering them by ingridient, displaying each separately, providing ingredient list, measures and preparation method.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## API
 
-### `npm test`
+https://www.thecocktaildb.com/api.php  
+https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka  
+https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Wireframes
 
-### `npm run build`
+Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Architecture & Time complexity diagram](https://i.imgur.com/5utKl4J.jpg)  
+[Wireframes](https://i.imgur.com/eZVA4TN.jpg)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### MVP/PostMVP - 5min
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The functionality will then be divided into two separate lists: MPV and PostMVP. Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.
 
-### `npm run eject`
+#### MVP
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- API Fetch
+- Render components
+- Routing between components
+- Responsiveness
+- Netlify deployment
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### PostMVP
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- CSS/Design touchup
+- Additional form to search by name
+- Animations / Transitions
+- New libraries and frameworks utilization
+- Images
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Components
 
-## Learn More
+##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Component |                                      Description                                      |
+| --------- | :-----------------------------------------------------------------------------------: |
+| App       |                  This will be top element with routing functionality                  |
+| Header    |                    This will render the header and include the nav                    |
+| Routes    | This will route center part of the page between components (drinks/about/cocktail...) |
+| Footer    |                  This will render the footer and social media icons                   |
 
-### Code Splitting
+Time frames are also key in the development cycle. You have limited time to code all phases of the game. Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+| MVP                        | Priority | Estimated Time | Time Invetsted | Actual Time |
+| -------------------------- | :------: | :------------: | :------------: | :---------: |
+| Pulling API Data           |    H     |      1hrs      |     1.5hrs     |   1.5hrs    |
+| Render components          |    H     |      3hrs      |      4hrs      |    ~3hrs    |
+| Routing between components |    H     |      2hrs      |      3hrs      |    2hrs     |
+| Responsiveness             |    M     |      4hrs      |      hrs       |     hrs     |
+| Netlify deployment         |    M     |     30min      |      hrs       |     hrs     |
+| Total                      |    H     |     ~15hrs     |      hrs       |     hrs     |
 
-### Analyzing the Bundle Size
+| MVP+                                     | Priority | Estimated Time | Time Invested | Actual Time |
+| ---------------------------------------- | :------: | :------------: | :-----------: | :---------: |
+| CSS/Design touchup                       |    H     |     5-6hrs     |      hrs      |     hrs     |
+| Additional form to search by name        |    M     |     2-3hrs     |      hrs      |     hrs     |
+| Animations / Transitions                 |    H     |      hrs       |      hrs      |     hrs     |
+| New libraries and frameworks utilization |    L     |      hrs       |      hrs      |     hrs     |
+| Images                                   |    L     |      3hrs      |      hrs      |     hrs     |
+| Total                                    |    H     |     13hrs      |      hrs      |     hrs     |
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Additional Libraries
 
-### Making a Progressive Web App
+- None for now
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Code Snippet
 
-### Advanced Configuration
+Use this section to include a brief code snippet of functionality that you are proud of an a brief description. Code snippet should not be greater than 10 lines of code.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
+function reverse(string) {
+	// here is the code to reverse a string of text
+}
+```
