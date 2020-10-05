@@ -13,7 +13,7 @@ function Drinks() {
 				console.log(data.drinks);
 				setDrinksData(data.drinks);
 			});
-	};  
+	};
 	//CHANGE PLACEHOLDER PICS LATER
 	return (
 		<div className='Drinks'>
@@ -35,6 +35,16 @@ function Drinks() {
 				alt=''></img>
 			<img
 				onClick={() => filterDrink('bourbon')}
+				className='Bottle'
+				src='https://www.iconfinder.com/data/icons/food-drink-15/115/drink-food-beverage_196-512.png'
+				alt=''></img>
+			<img
+				onClick={() => filterDrink('rum')}
+				className='Bottle'
+				src='https://www.iconfinder.com/data/icons/food-drink-15/115/drink-food-beverage_196-512.png'
+				alt=''></img>
+			<img
+				onClick={() => filterDrink('scotch')}
 				className='Bottle'
 				src='https://www.iconfinder.com/data/icons/food-drink-15/115/drink-food-beverage_196-512.png'
 				alt=''></img>
