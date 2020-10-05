@@ -21,7 +21,6 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 [Architecture & Time complexity diagram](https://i.imgur.com/5utKl4J.jpg)  
 [Wireframes](https://i.imgur.com/eZVA4TN.jpg)
 
-<<<<<<< HEAD
 ### MVP/PostMVP - 5min
 
 The functionality will then be divided into two separate lists: MPV and PostMVP. Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.
@@ -149,7 +148,7 @@ Time frames are also key in the development cycle. You have limited time to code
 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description. Code snippet should not be greater than 10 lines of code.
 
->>>>>>> 637966ed01166ad6ca6f160fd6001dec0ee62986
+
 ```
 function reverse(string) {
 	// here is the code to reverse a string of text
