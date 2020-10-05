@@ -52,6 +52,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | --------- | :-----------------------------------------------------------: |
 | App       | This will be top element with routing functionality |
 | Header    |          This will render the header and include the nav          |
+| Routes    |          This will route center part of the page between selections (drinks/about/cocktail...)          |
 | Footer    |          This will render the footer and social media icons          |
 
 Time frames are also key in the development cycle. You have limited time to code all phases of the game. Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
