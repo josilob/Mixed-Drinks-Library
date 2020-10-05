@@ -10,8 +10,8 @@ React app for browsing mixed drinks, filtering them by ingridient, displaying ea
 
 ## API
 
-https://www.thecocktaildb.com/api.php
-https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka
+https://www.thecocktaildb.com/api.php  
+https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka  
 https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007
 
 ## Wireframes
