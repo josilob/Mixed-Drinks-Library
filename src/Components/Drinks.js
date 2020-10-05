@@ -13,7 +13,7 @@ function Drinks() {
 				console.log(data.drinks);
 				setDrinksData(data.drinks);
 			});
-	};
+	};  
 	//CHANGE PLACEHOLDER PICS LATER
 	return (
 		<div className='Drinks'>
