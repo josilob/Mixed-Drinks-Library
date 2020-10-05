@@ -16,8 +16,8 @@ https://www.thecocktaildb.com/api.php
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-- [Architecture & Time complexity diagram] [Imgur](https://imgur.com/5utKl4J)
-- [Wireframes][Imgur](https://imgur.com/eZVA4TN)
+[Architecture & Time complexity diagram](https://i.imgur.com/5utKl4J.jpg)
+[Wireframes](https://i.imgur.com/eZVA4TN.jpg)
 
 
 ### MVP/PostMVP - 5min
@@ -56,20 +56,20 @@ Time frames are also key in the development cycle. You have limited time to code
 
 | MVP                      | Priority | Estimated Time | Time Invetsted | Actual Time |
 | ------------------------ | :------: | :------------: | :------------: | :---------: |
-| Pulling API Data         |    H     |      2hrs      |      2hrs      |    2hrs     |
-| Render components |    H     |      2hrs      |      hrs       |     hrs     |
-| Routing between components      |    H     |      2hrs      |      hrs       |     hrs     |
-| Responsiveness  |    M     |      3hrs      |      hrs       |     hrs     |
-| Netlify deployment |    M     |      2hrs      |      hrs       |     hrs     |
-| Total                    |    H     |     13hrs      |      5hrs      |     hrs     |
+| Pulling API Data         |    H     |      1hrs      |      1.5hrs      |    1.5hrs     |
+| Render components |    H     |      3hrs      |      4hrs       |     ~3hrs     |
+| Routing between components      |    H     |      2hrs      |      3hrs       |     2hrs     |
+| Responsiveness  |    M     |      4hrs      |      hrs       |     hrs     |
+| Netlify deployment |    M     |      30min      |      hrs       |     hrs     |
+| Total                    |    H     |     ~15hrs      |      hrs      |     hrs     |
 
 | MVP+                           | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------ | :------: | :------------: | :-----------: | :---------: |
-| CSS/Design touchup              |    M     |      2hrs      |      hrs      |     hrs     |
-| Additional form to search by name |    L     |      3hrs      |      hrs      |     hrs     |
-| Animations / Transitions    |    H     |      3hrs      |      hrs      |     hrs     |
-| New libraries and frameworks utilization                   |    H     |      2hrs      |      hrs      |     hrs     |
-| Images       |    H     |      3hrs      |      hrs      |     hrs     |
+| CSS/Design touchup              |    H     |      5-6hrs      |      hrs      |     hrs     |
+| Additional form to search by name |    M     |      2-3hrs      |      hrs      |     hrs     |
+| Animations / Transitions    |    H     |      hrs      |      hrs      |     hrs     |
+| New libraries and frameworks utilization                   |    L     |      hrs      |      hrs      |     hrs     |
+| Images       |    L     |      3hrs      |      hrs      |     hrs     |
 | Total                          |    H     |     13hrs      |      hrs      |     hrs     |
 
 
