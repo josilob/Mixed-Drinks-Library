@@ -9,7 +9,7 @@ import Drinks from '../Components/Drinks';
 import About from '../Components/About';
 
 function App() {
-	return (                                         
+	return (
 		<>
 			<Header />
 			<Switch>
