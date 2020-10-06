@@ -1,3 +1,18 @@
+.Header {
+	background: black;
+	display: flex;
+	justify-content: space-between;
+}
+.fas {
+	font-size: 2.5vw;
+}
+
 .header-title {
 	color: white;
+}
+.fas {
+	color: white;
+}
+
+@media screen and (max-width: 425px) {
 }

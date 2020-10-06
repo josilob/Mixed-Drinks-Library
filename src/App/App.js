@@ -24,12 +24,7 @@ function App() {
 				</Route>
 				<Route
 					path='/cocktail/:cocktail'
-					render={(routerProps) => (
-						<Cocktail
-							// handleClick={handleClick}
-							{...routerProps}
-						/>
-					)}
+					render={(routerProps) => <Cocktail {...routerProps} />}
 				/>
 			</Switch>
 			<Footer />

@@ -6,57 +6,65 @@
 
 .Drinks {
 	display: grid;
+	background: lightblue;
 }
 
-.Drinks img {
-}
-
-.Bottle {
-	height: 40vh;
-	width: auto;
+.bottles {
+	display: flex;
+	height: 50vh;
 }
 
 .bottle-div {
-	position: absolute;
-	transform: translateX(-50%);
+	box-sizing: content-box;
 	transform-origin: bottom;
 	cursor: pointer;
-	transition: opacity 0.2s;
-	display: grid;
+	display: block;
 	text-align: center;
 	width: 0;
+}
+
+.drink-type {
+	box-sizing: content-box;
+}
+
+.Bottle {
+	height: 30vh;
+	width: auto;
 }
 
 .bottle-div:nth-child(1) {
 	top: 30%;
 	left: 30%;
-	transform: translateX(-15vw) translateY(10vh) rotate(-50deg);
+	transform: translateX(36vw) translateY(13vh) rotate(-35deg);
 }
 
 .bottle-div:nth-child(2) {
 	top: 20%;
 	left: 40%;
-	transform: translateX(-15vw) translateY(5vh) rotate(-25deg);
+	transform: translateX(40vw) translateY(7vh) rotate(-22.5deg);
 }
 
 .bottle-div:nth-child(3) {
 	top: 15%;
 	left: 50%;
-	transform: translateX(-15vw) translateY(5vh) rotate(-5deg);
+	transform: translateX(42vw) translateY(5vh) rotate(-5deg);
 }
 .bottle-div:nth-child(4) {
 	top: 20%;
 	left: 60%;
-	transform: translateX(-10vw) translateY(-2vh) rotate(5deg);
+	transform: translateX(45vw) translateY(4.5vh) rotate(5deg);
 }
 .bottle-div:nth-child(5) {
 	top: 30%;
 	left: 70%;
-	transform: translateX(-5vw) translateY(-10vh) rotate(25deg);
+	transform: translateX(50vw) translateY(4.5vh) rotate(22.5deg);
 }
 
 .bottle-div:nth-child(6) {
 	top: 30%;
 	left: 70%;
-	transform: translateX(2vw) translateY(-10vh) rotate(50deg);
+	transform: translateX(52vw) translateY(5vh) rotate(35deg);
+}
+
+@media screen and (max-width: 425px) {
 }
