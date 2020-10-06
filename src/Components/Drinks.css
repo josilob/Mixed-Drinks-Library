@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.Drinks {
+	display: grid;
+}
+
+.Drinks img {
+}
+
+.Bottle {
+	height: 40vh;
+	width: auto;
+}
+
+.bottle-div {
+	position: absolute;
+	transform: translateX(-50%);
+	transform-origin: bottom;
+	cursor: pointer;
+	transition: opacity 0.2s;
+	display: grid;
+	text-align: center;
+	width: 0;
+}
+
+.bottle-div:nth-child(1) {
+	top: 30%;
+	left: 30%;
+	transform: translateX(-15vw) translateY(10vh) rotate(-50deg);
+}
+
+.bottle-div:nth-child(2) {
+	top: 20%;
+	left: 40%;
+	transform: translateX(-15vw) translateY(5vh) rotate(-25deg);
+}
+
+.bottle-div:nth-child(3) {
+	top: 15%;
+	left: 50%;
+	transform: translateX(-15vw) translateY(5vh) rotate(-5deg);
+}
+.bottle-div:nth-child(4) {
+	top: 20%;
+	left: 60%;
+	transform: translateX(-10vw) translateY(-2vh) rotate(5deg);
+}
+.bottle-div:nth-child(5) {
+	top: 30%;
+	left: 70%;
+	transform: translateX(-5vw) translateY(-10vh) rotate(25deg);
+}
+
+.bottle-div:nth-child(6) {
+	top: 30%;
+	left: 70%;
+	transform: translateX(2vw) translateY(-10vh) rotate(50deg);
+}

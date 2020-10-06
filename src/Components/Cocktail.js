@@ -40,7 +40,7 @@ function Cocktail(props) {
 	return (
 		<div className='Cocktail'>
 			<h1>{details.strDrink}</h1>
-			<img className='drink-img' src={details.strDrinkThumb} />
+			<img className='drink-img' src={details.strDrinkThumb} alt='drink' />
 			<div>
 				<div>
 					List of ingredients:

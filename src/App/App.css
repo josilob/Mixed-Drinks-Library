@@ -14,17 +14,14 @@
 	pointer-events: none;
 }
 .Header {
-	background: gray;
+	background: black;
 	display: flex;
 	justify-content: space-between;
 }
 .fas {
 	font-size: 30px;
 }
-.Bottle {
-	height: 100px;
-	width: auto;
-}
+
 .drink-img {
 	height: 100px;
 	width: auto;
