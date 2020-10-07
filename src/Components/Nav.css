@@ -13,8 +13,8 @@
 	grid-gap: 10px;
 	list-style: none;
 	text-align: center;
-	width: 300px;
-	justify-content: end;
+	width: 350px;
+	justify-content: start;
 }
 
 .nav-item {
