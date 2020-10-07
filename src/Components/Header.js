@@ -7,7 +7,11 @@ function Header() {
 	return (
 		<div className='Header'>
 			<Link to='/'>
-				<i className='fas fa-glass-martini-alt'></i>
+				<img
+					src='https://static.thenounproject.com/png/95369-200.png'
+					alt='cheers'
+					className='cheers '
+				/>
 			</Link>
 			<h1 className='header-title'>Mixed Drinks Library</h1>
 			<Nav />

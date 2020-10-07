@@ -1,11 +1,15 @@
 import React from 'react';
+import './Home.css';
 
 function Home() {
 	return (
 		<div className='Home'>
-			<div>
-				<h1>This is the homepage!</h1>
-				<p>Start the search for your own drink</p>
+			<div className='home'>
+				{/* <img
+					src='https://freedesignfile.com/upload/2017/11/Cocktails-blackboard-menu-hand-drawn-vector.jpg'
+					alt='img'
+				/> */}
+				<p></p>
 			</div>
 		</div>
 	);

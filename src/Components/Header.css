@@ -1,14 +1,25 @@
 .Header {
-	background: black;
+	background: rgb(9, 9, 9);
 	display: flex;
 	justify-content: space-between;
+	height: 90px;
+	width: 100vw;
 }
-.fas {
-	font-size: 2.5vw;
+
+.cheers {
+	filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(128deg)
+		brightness(105%) contrast(105%);
+	height: 90px;
+	width: auto;
+	padding-left: 10px;
 }
 
 .header-title {
 	color: white;
+	font-size: 36px;
+	font-family: 'Fredericka the Great';
+	margin-left: 10vw;
+	padding-top: 3vh;
 }
 .fas {
 	color: white;

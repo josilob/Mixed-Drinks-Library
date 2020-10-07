@@ -1,8 +1,13 @@
 * {
-	border: red solid 1px !important;
+	/* border: red solid 1px !important; */
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+body,
+html {
+	height: 100%;
+	margin: 0;
 }
 
 @media screen and (max-width: 425px) {
