@@ -8,10 +8,19 @@
 	display: grid;
 	background: gray;
 	width: 100vw;
-	height: 90vh;
+	height: 100vh;
+	background-image: url('https://images.pexels.com/photos/274192/pexels-photo-274192.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+	width: 100vw;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .drinks-intro {
 	height: 150px;
+	text-align: center;
+	color: white;
+	padding-top: 40px;
+	line-height: 1.5;
 }
 .bottles {
 	display: flex;
@@ -27,7 +36,7 @@
 }
 
 .Bottle {
-	height: 30vh;
+	height: 45vh;
 	width: auto;
 }
 .drink-type {
@@ -35,25 +44,25 @@
 }
 
 .bottle-div:nth-child(1) {
-	transform: translateX(36vw) translateY(13vh) rotate(-35deg);
+	transform: translateX(32vw) translateY(13vh) rotate(-35deg);
 }
 
 .bottle-div:nth-child(2) {
-	transform: translateX(40vw) translateY(7vh) rotate(-22.5deg);
+	transform: translateX(38.5vw) translateY(5vh) rotate(-22.5deg);
 }
 
 .bottle-div:nth-child(3) {
-	transform: translateX(42vw) translateY(5vh) rotate(-5deg);
+	transform: translateX(41.5vw) translateY(2vh) rotate(-5deg);
 }
 .bottle-div:nth-child(4) {
-	transform: translateX(45vw) translateY(4.5vh) rotate(5deg);
+	transform: translateX(45vw) translateY(1.5vh) rotate(5deg);
 }
 .bottle-div:nth-child(5) {
-	transform: translateX(50vw) translateY(4.5vh) rotate(22.5deg);
+	transform: translateX(53.5vw) translateY(1.5vh) rotate(22.5deg);
 }
 
 .bottle-div:nth-child(6) {
-	transform: translateX(52vw) translateY(5vh) rotate(35deg);
+	transform: translateX(57vw) translateY(2vh) rotate(35deg);
 }
 
 .Bottle:hover {

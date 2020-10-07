@@ -20,6 +20,7 @@ function Drinks() {
 		<div className='Drinks'>
 			<div className='drinks-intro'>
 				<h2>Bottoms UP!</h2>
+				<h2>SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT</h2>
 			</div>
 			<div className='bottles'>
 				<div className='bottle-div'>
@@ -29,7 +30,7 @@ function Drinks() {
 						src='https://d3czfiwbzom72b.cloudfront.net/wp-content/uploads/2018/09/8686-ABSOLUT-VODKA-w.png'
 						alt='bottle'
 					/>
-					<span className='drink-type'>VODKA</span>
+					{/* <span className='drink-type'>VODKA</span> */}
 				</div>
 
 				<div className='bottle-div'>
@@ -39,7 +40,7 @@ function Drinks() {
 						src='https://www.houseoftownend.com/Content/Images/Products/BEEF005.png'
 						alt='bottle'
 					/>
-					<span className='drink-type'>GIN</span>
+					{/* <span className='drink-type'>GIN</span> */}
 				</div>
 
 				<div className='bottle-div'>
@@ -49,7 +50,7 @@ function Drinks() {
 						src='https://cdn.shopify.com/s/files/1/1531/2799/products/JoseCuervo_Reposado_fae752a8-6806-4ffc-9e71-59d4afa57524_grande.png?v=1597638393'
 						alt='bottle'
 					/>
-					<span className='drink-type'>TEQUILA</span>
+					{/* <span className='drink-type'>TEQUILA</span> */}
 				</div>
 
 				<div className='bottle-div'>
@@ -59,7 +60,7 @@ function Drinks() {
 						src='https://marketaonline.com/wp-content/uploads/edd/2018/09/49750_0_9999_v1_m56577569854542926_large__83719.1452472340.1000.1200-e1538013302657.png'
 						alt='bottle'
 					/>
-					<span className='drink-type'>BOURBON</span>
+					{/* <span className='drink-type'>BOURBON</span> */}
 				</div>
 
 				<div className='bottle-div'>
@@ -69,7 +70,7 @@ function Drinks() {
 						src='https://www.houseoftownend.com/Content/Images/Products/BACA020.png'
 						alt='bottle'
 					/>
-					<span className='drink-type'>RUM</span>
+					{/* <span className='drink-type'>RUM</span> */}
 				</div>
 
 				<div className='bottle-div'>
@@ -79,7 +80,7 @@ function Drinks() {
 						src='https://d3czfiwbzom72b.cloudfront.net/wp-content/uploads/2018/09/002464-DEWAR-S-WHITE-LABEL-BLENDED-SCOTCH-w.png'
 						alt=''
 					/>
-					<span className='drink-type'>SCOTCH</span>
+					{/* <span className='drink-type'>SCOTCH</span> */}
 				</div>
 			</div>
 			<div className='drink-list'>

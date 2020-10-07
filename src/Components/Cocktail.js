@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cocktail.css';
 
 function Cocktail(props) {
 	const [details, setDetails] = React.useState([]);
@@ -42,18 +43,16 @@ function Cocktail(props) {
 			<h1>{details.strDrink}</h1>
 			<img className='drink-img' src={details.strDrinkThumb} alt='drink' />
 			<div>
-				<div>
-					List of ingredients:
-					{ingredients.map((element, index) => (
-						<div key={index}>
-							{element.ingredientName}
-							{'  '}
-							{element.ingredientMeasure}
-						</div>
-					))}
-				</div>
-				<p>{details.strInstructions}</p>
+				<h3 className='ingr-list'>List of ingredients:</h3>
+				{ingredients.map((element, index) => (
+					<div key={index} className='ingredients'>
+						<h4>{element.ingredientName}</h4>
+						{' : '}
+						<p>{element.ingredientMeasure}</p>
+					</div>
+				))}
 			</div>
+			<p className='instructions'>{details.strInstructions}</p>
 		</div>
 	);
 }

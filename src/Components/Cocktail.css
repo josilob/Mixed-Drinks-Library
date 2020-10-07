@@ -1,2 +1,26 @@
+.Cocktail {
+	display: grid;
+	text-align: center;
+	height: 82vh;
+}
+
+.drink-img {
+	height: 25vh;
+	margin: 0 auto;
+	border-radius: 15%;
+	border-style: groove;
+}
+
+.ingredients {
+	display: flex;
+	justify-content: center;
+	line-height: 1.5;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+.instructions {
+	font-size: 24px;
+}
+
 @media screen and (max-width: 425px) {
 }
