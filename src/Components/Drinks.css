@@ -8,12 +8,13 @@
 	display: grid;
 	background: gray;
 	width: 100vw;
-	height: 100vh;
+	height: 95vh;
 	background-image: url('https://images.pexels.com/photos/274192/pexels-photo-274192.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
 	width: 100vw;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 }
 .drinks-intro {
 	height: 150px;
@@ -36,7 +37,7 @@
 }
 
 .Bottle {
-	height: 45vh;
+	height: 48vh;
 	width: auto;
 }
 .drink-type {
@@ -44,25 +45,25 @@
 }
 
 .bottle-div:nth-child(1) {
-	transform: translateX(32vw) translateY(13vh) rotate(-35deg);
+	transform: translateX(30vw) translateY(13vh) rotate(-35deg);
 }
 
 .bottle-div:nth-child(2) {
-	transform: translateX(38.5vw) translateY(5vh) rotate(-22.5deg);
+	transform: translateX(37.5vw) translateY(5vh) rotate(-22.5deg);
 }
 
 .bottle-div:nth-child(3) {
-	transform: translateX(41.5vw) translateY(2vh) rotate(-5deg);
+	transform: translateX(41vw) translateY(2vh) rotate(-5deg);
 }
 .bottle-div:nth-child(4) {
 	transform: translateX(45vw) translateY(1.5vh) rotate(5deg);
 }
 .bottle-div:nth-child(5) {
-	transform: translateX(53.5vw) translateY(1.5vh) rotate(22.5deg);
+	transform: translateX(55vw) translateY(1.5vh) rotate(22.5deg);
 }
 
 .bottle-div:nth-child(6) {
-	transform: translateX(57vw) translateY(2vh) rotate(35deg);
+	transform: translateX(59vw) translateY(2vh) rotate(35deg);
 }
 
 .Bottle:hover {
@@ -70,5 +71,85 @@
 	transition: transform 0.2s ease-out;
 }
 
-@media screen and (max-width: 425px) {
+.drink-list {
+	margin: 90px auto 30px;
+	background: yellow;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex: 1 1 1;
+	text-align: center;
+}
+
+.cocktail-list-name {
+	font-size: 16px;
+	font-weight: 400;
+	text-align: left;
+	display: flex;
+	flex-direction: row;
+	vertical-align: center;
+	justify-content: center;
+	width: 200px;
+	height: 50px;
+	padding: 5px;
+	margin: 10px;
+	box-sizing: border-box;
+	color: #fff;
+	background: #4776e6;
+	background: linear-gradient(to right, #060505, #4776e6);
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 1) 0 12px 30px;
+}
+@media screen and (max-width: 768px) {
+	.Bottle {
+		height: 44vh;
+	}
+
+	.bottle-div:nth-child(1) {
+		transform: translateX(27vw) translateY(13vh) rotate(-35deg);
+	}
+
+	.bottle-div:nth-child(2) {
+		transform: translateX(35.5vw) translateY(4vh) rotate(-22.5deg);
+	}
+
+	.bottle-div:nth-child(3) {
+		transform: translateX(40vw) translateY(0vh) rotate(-5deg);
+	}
+	.bottle-div:nth-child(4) {
+		transform: translateX(45vw) translateY(0vh) rotate(5deg);
+	}
+	.bottle-div:nth-child(5) {
+		transform: translateX(57vw) translateY(0.5vh) rotate(22.5deg);
+	}
+
+	.bottle-div:nth-child(6) {
+		transform: translateX(62vw) translateY(2vh) rotate(35deg);
+	}
+}
+@media screen and (max-width: 426px) {
+	.Bottle {
+		height: 30vh;
+	}
+	.bottle-div:nth-child(1) {
+		transform: translateX(14vw) translateY(40vh);
+	}
+
+	.bottle-div:nth-child(2) {
+		transform: translateX(43vw) translateY(40vh);
+	}
+
+	.bottle-div:nth-child(3) {
+		transform: translateX(67vw) translateY(40vh);
+	}
+	.bottle-div:nth-child(4) {
+		transform: translateX(37vw) translateY(2vh);
+	}
+	.bottle-div:nth-child(5) {
+		transform: translateX(31vw) translateY(20vh);
+	}
+
+	.bottle-div:nth-child(6) {
+		transform: translateX(53vw) translateY(20vh);
+	}
 }

@@ -2,16 +2,17 @@
 	background: rgb(9, 9, 9);
 	display: flex;
 	justify-content: space-between;
-	height: 90px;
+	height: 80px;
 	width: 100vw;
 }
 
 .cheers {
 	filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(128deg)
 		brightness(105%) contrast(105%);
-	height: 90px;
+	height: 75px;
 	width: auto;
 	padding-left: 10px;
+	padding-top: 10px;
 }
 
 .header-title {
@@ -25,5 +26,29 @@
 	color: white;
 }
 
+@media screen and (max-width: 768px) {
+	.Header {
+		height: 60px;
+	}
+
+	.header-title {
+		font-size: 28px;
+		margin-left: -5vw;
+		padding-top: 2vh;
+	}
+	.cheers {
+		height: 60px;
+	}
+	.fas {
+		padding-bottom: -40px;
+		transform: translateY(-5px);
+	}
+}
+
 @media screen and (max-width: 425px) {
+	.header-title {
+		font-size: 20px;
+		margin-left: -40px;
+		padding-top: 3vh;
+	}
 }

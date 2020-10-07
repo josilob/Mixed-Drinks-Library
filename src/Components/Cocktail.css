@@ -1,7 +1,7 @@
 .Cocktail {
 	display: grid;
 	text-align: center;
-	height: 82vh;
+	margin-top: 5%;
 }
 
 .drink-img {
@@ -17,9 +17,12 @@
 	line-height: 1.5;
 	font-weight: 500;
 	letter-spacing: 1px;
+	font-size: 20px;
 }
 .instructions {
-	font-size: 24px;
+	font-size: 22px;
+	width: 30vw;
+	margin: 0 auto;
 }
 
 @media screen and (max-width: 425px) {

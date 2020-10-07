@@ -91,7 +91,7 @@ function Drinks() {
 							pathname: '/cocktail/' + element.strDrink,
 							state: { idDrink: element.idDrink },
 						}}>
-						<div>{element.strDrink}</div>
+						<div className='cocktail-list-name'>{element.strDrink}</div>
 					</Link>
 				))}
 			</div>
