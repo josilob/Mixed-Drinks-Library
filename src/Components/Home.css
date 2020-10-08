@@ -1,14 +1,13 @@
 .Home {
 	display: grid;
 	background: black;
-	background-image: url('https://cdn.hipwallpaper.com/i/8/31/SYgnOj.jpg');
-	background-position: center 20vh;
-	min-height: 89vh;
+	background-image: url('https://images.pond5.com/cocktail-lime-black-background-footage-023977545_prevstill.jpeg');
+	background-position: -60% 20vh;
+	min-height: 92vh;
 	min-width: 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-
-	background-size: cover;
+	background-size: 80% auto;
 }
 .home-intro {
 	padding-top: 0px;
@@ -23,29 +22,56 @@
 }
 
 .home-img {
-	width: 15vw;
+	width: 12vw;
 	filter: invert(1);
 	position: absolute;
 	right: 3%;
 	bottom: 5%;
 }
 .home-img2 {
-	width: 30vw;
+	width: 28vw;
 	filter: invert(0);
 	position: absolute;
-	left: 2%;
+	left: 36%;
 	bottom: 5%;
 }
 
 @media screen and (max-width: 768px) {
+	.Home {
+		background-image: none;
+		background: black;
+	}
+
 	.home-img {
-		transform: translateX(-30vw) translateY(10vh) scale(1);
+		width: 16vw;
+		right: 5%;
+		bottom: 5%;
+	}
+	.home-img2 {
+		width: 55vw;
+		filter: invert(0);
+		position: absolute;
+		left: 10%;
+		bottom: 5%;
+	}
+	.home-intro {
+		padding-top: 30px;
+
+		width: 55%;
+		font-size: 22px;
+		line-height: 1.6;
+		text-align: center;
 	}
 }
 
 @media screen and (max-width: 425px) {
 	.Home {
 	}
-	.home-img {
+	.home-intro {
+		padding-top: 0px;
+		margin-top: 10px;
+		width: 65%;
+		font-size: 18px;
+		line-height: 1.6;
 	}
 }

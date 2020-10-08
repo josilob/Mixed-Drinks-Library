@@ -7,6 +7,7 @@
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
+	overflow: hidden;
 }
 .drinks-intro {
 	height: 150px;
@@ -75,6 +76,7 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+
 	text-align: center;
 	justify-content: space-evenly;
 }
@@ -95,10 +97,9 @@
 	box-shadow: rgba(0, 0, 0, 1) 0 12px 30px;
 	text-decoration: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
 	.drinks-intro {
 		height: 150px;
-
 		padding-top: 50px;
 		line-height: 1.5;
 		font-size: 16px;
@@ -107,36 +108,43 @@
 
 	.bottles {
 		padding-top: 45px;
+		height: 500px;
 	}
 	.Bottle {
-		height: 40vh;
+		height: 250px;
 	}
 
 	.bottle-div:nth-child(1) {
-		transform: translateX(27vw) translateY(13vh) rotate(-35deg);
+		transform: translateX(36vw) translateY(11vh) rotate(-35deg);
 	}
 
 	.bottle-div:nth-child(2) {
-		transform: translateX(35.5vw) translateY(4vh) rotate(-22.5deg);
+		transform: translateX(40vw) translateY(4vh) rotate(-22.5deg);
 	}
 
 	.bottle-div:nth-child(3) {
-		transform: translateX(40vw) translateY(0vh) rotate(-5deg);
+		transform: translateX(39vw) translateY(0vh) rotate(-5deg);
 	}
 	.bottle-div:nth-child(4) {
-		transform: translateX(47vw) translateY(0vh) rotate(5deg);
+		transform: translateX(46vw) translateY(0vh) rotate(5deg);
 	}
 	.bottle-div:nth-child(5) {
-		transform: translateX(57vw) translateY(0.5vh) rotate(22.5deg);
+		transform: translateX(51vw) translateY(0.5vh) rotate(22.5deg);
 	}
 
 	.bottle-div:nth-child(6) {
-		transform: translateX(62vw) translateY(2vh) rotate(35deg);
+		transform: translateX(50vw) translateY(2vh) rotate(35deg);
 	}
 }
 @media screen and (max-width: 436px) {
+	.Drinks {
+		background-image: url('https://www.desktopbackground.org/p/2010/06/13/32467_oppo-r7-wallpaper-jack-daniels-whiskey-mobile-android-wallpapers_1080x1920_h.jpg');
+		background-position: center 30%;
+	}
+
 	.Bottle {
 		height: 30vh;
+		width: auto;
 	}
 	.bottle-div:nth-child(1) {
 		transform: translateX(14vw) translateY(35vh);
@@ -161,13 +169,11 @@
 	}
 
 	.drinks-intro {
-		padding-top: 25px;
+		padding-top: 15px;
 		max-width: 75%;
-		font-size: 16px;
+		font-size: 13px;
 	}
-}
 
-@media screen and (max-width: 426px) {
 	.cocktail-list-name {
 		font-size: 16px;
 		width: 150px;

@@ -60,3 +60,11 @@
 		padding-top: 3vh;
 	}
 }
+
+@media screen and (min-width: 1440px) {
+	.header-title {
+		font-size: 42px;
+		margin-left: 10%;
+		padding-top: 15px;
+	}
+}
