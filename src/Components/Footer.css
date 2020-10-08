@@ -3,7 +3,7 @@ footer {
 	bottom: 0;
 	width: 100%;
 	height: 32px;
-	background: white;
+	background: black;
 	display: flex;
 	justify-content: center;
 	align-content: middle;
@@ -12,11 +12,12 @@ footer {
 footer p {
 	font-size: 20px;
 	text-align: center;
+	color: white;
 }
 footer i {
 	font-size: 30px;
 	padding: 0 10px;
-	color: black;
+	color: white;
 }
 
 @media screen and (max-width: 768px) {

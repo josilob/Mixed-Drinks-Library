@@ -9,7 +9,7 @@ function About() {
 			<p className='about-text'> Student name: Bojan Josilo</p>
 
 			<p className='about-text'>
-				React based page made in conjunction with TheCocktialDB API.
+				React based page combined with TheCocktialDB API.
 			</p>
 
 			<p className='about-text'>
@@ -18,7 +18,7 @@ function About() {
 			</p>
 			<img
 				className='ga-logo'
-				src='https://lh3.googleusercontent.com/proxy/FeFu7zPsbqBhGc6p9xoXP5FzgiDSBJBj3IVBn74hkUe0yPT8PzTwLxl9SZRMmDUTJw04MH0iCoJuEMS4IzHPtX45OB3qqlK79hxoJF8YCBaQCum6kZ-HKbuj3l_2Q-XntqE'
+				src='https://info.mercer.com/rs/521-DEV-513/images/General-Assembly-logo.png'
 				alt='img'
 			/>
 			<p className='about-text'>

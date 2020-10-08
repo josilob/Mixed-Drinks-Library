@@ -3,15 +3,15 @@
 	display: flex;
 	justify-content: space-between;
 	height: 80px;
-	width: 100vw;
+	width: 100%;
 }
 
 .cheers {
 	filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(128deg)
 		brightness(105%) contrast(105%);
-	height: 75px;
+	height: 65px;
 	width: auto;
-	padding-left: 10px;
+	padding-left: 20px;
 	padding-top: 10px;
 }
 
@@ -19,11 +19,19 @@
 	color: white;
 	font-size: 36px;
 	font-family: 'Fredericka the Great';
-	margin-left: 17%;
+	margin-left: 18%;
 	padding-top: 3vh;
 }
 .fas {
 	color: white;
+}
+
+@media screen and (max-width: 1024px) {
+	.header-title {
+		font-size: 30px;
+		margin-left: 23vw;
+		padding-top: 3vh;
+	}
 }
 
 @media screen and (max-width: 768px) {
