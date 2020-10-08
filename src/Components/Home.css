@@ -1,25 +1,40 @@
 .Home {
 	display: grid;
-	background-image: url('https://assets.punchdrink.com/wp-content/uploads/2017/04/Article-How-to-Use-Acids-in-Cocktails-Lactic-Malic-Fake-Lime-Daiquiri-Recipe-White-Lyan-London.jpg');
-	background-position: center center;
-	min-height: 90vh;
+	background: black;
+	background-image: url('https://cdn.hipwallpaper.com/i/8/31/SYgnOj.jpg');
+	background-position: center 20vh;
+	min-height: 89vh;
 	min-width: 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+
 	background-size: cover;
+}
+.home-intro {
+	padding-top: 0px;
+	font-family: 'Fredericka the Great';
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 10px;
+	width: 65%;
+	color: white;
+	font-size: 26px;
+	line-height: 1.6;
 }
 
 .home-img {
+	width: 15vw;
+	filter: invert(1);
+	position: absolute;
+	right: 3%;
+	bottom: 5%;
 }
-.home-intro {
-	padding-top: 50px;
-	font-family: 'Fredericka the Great';
-	font-size: 26px;
-	text-align: center;
-	margin-top: 0px;
-	width: 55%;
-	margin: 0 auto;
-	color: white;
+.home-img2 {
+	width: 30vw;
+	filter: invert(0);
+	position: absolute;
+	left: 2%;
+	bottom: 5%;
 }
 
 @media screen and (max-width: 768px) {
