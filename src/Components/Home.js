@@ -8,7 +8,7 @@ function Home() {
 				<p className='home-intro'>
 					SAMPLE TEXT SAMEPLE TEXT <br /> SAMPLE TEXT SAMPLE TEXT
 				</p>
-				<img className='home-img' src='' alt='img' />
+				{/* <img className='home-img' src='' alt='img' /> */}
 			</div>
 		</div>
 	);
