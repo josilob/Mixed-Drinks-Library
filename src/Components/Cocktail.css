@@ -24,9 +24,7 @@
 	width: 30vw;
 	margin: 0 auto;
 }
-.drink-list a {
-	text-decoration: none;
-}
+
 @media screen and (max-width: 425px) {
 	.drinkName {
 		font-size: 24px;
@@ -35,7 +33,5 @@
 	.instructions {
 		font-size: 20px;
 		width: 40vw;
-	}
-	.ingredients {
 	}
 }
