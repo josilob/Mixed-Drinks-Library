@@ -67,7 +67,9 @@
 	transform: scale(1.1);
 	transition: transform 0.2s ease-out;
 }
-
+.drink-list a {
+	text-decoration: none;
+}
 .drink-list {
 	margin: 90px auto 30px;
 	display: flex;
