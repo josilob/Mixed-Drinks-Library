@@ -4,7 +4,6 @@ footer {
 	width: 100%;
 	height: 32px;
 	background: white;
-
 	display: flex;
 	justify-content: center;
 	align-content: middle;
@@ -20,5 +19,22 @@ footer i {
 	color: black;
 }
 
+@media screen and (max-width: 768px) {
+	footer {
+		height: 27px;
+	}
+	footer p {
+		font-size: 18px;
+		padding-top: 3px;
+	}
+}
+
 @media screen and (max-width: 425px) {
+	footer {
+		height: 25px;
+	}
+	footer p {
+		font-size: 16px;
+		padding-top: 3px;
+	}
 }

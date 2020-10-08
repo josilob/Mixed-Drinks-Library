@@ -19,8 +19,11 @@ function Drinks() {
 	return (
 		<div className='Drinks'>
 			<div className='drinks-intro'>
-				<h2>Bottoms UP!</h2>
-				<h2>SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT</h2>
+				<h2 className='instruction'>
+					Choose your favorite spirit below and our bartender will come up with
+					an idea!
+				</h2>
+				<h2>Cheers!</h2>
 			</div>
 			<div className='bottles'>
 				<div className='bottle-div'>
@@ -57,7 +60,7 @@ function Drinks() {
 					<img
 						onClick={() => filterDrink('bourbon')}
 						className='Bottle'
-						src='https://marketaonline.com/wp-content/uploads/edd/2018/09/49750_0_9999_v1_m56577569854542926_large__83719.1452472340.1000.1200-e1538013302657.png'
+						src='https://d3czfiwbzom72b.cloudfront.net/wp-content/uploads/2018/09/7735-MAKERS-MARK-copy-w.png'
 						alt='bottle'
 					/>
 					{/* <span className='drink-type'>BOURBON</span> */}

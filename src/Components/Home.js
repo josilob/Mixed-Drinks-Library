@@ -5,10 +5,10 @@ function Home() {
 	return (
 		<div className='Home'>
 			<div className='home'>
-				<p></p>
+				<p className='home-intro'>Welcome to the</p>
 				<img
 					className='home-img'
-					src='https://cdn.shopify.com/s/files/1/1795/8271/products/mixed_drinks_760x.png?v=1507487749%27'
+					src='https://freedesignfile.com/upload/2017/06/Cocktail-menu-cover-with-chalkboard-and-chalk-drawing-vector-06.jpg'
 					alt='img'
 				/>
 			</div>

@@ -1,20 +1,12 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
 .Drinks {
 	display: grid;
-	background: gray;
-	width: 100vw;
-	height: 95vh;
 	background-image: url('https://images.pexels.com/photos/274192/pexels-photo-274192.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
-	width: 100vw;
-	background-position: center;
+	background-position: center center;
+	min-height: 100%;
+	min-width: 100%;
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-attachment: fixed;
 }
 .drinks-intro {
 	height: 150px;
@@ -22,11 +14,16 @@
 	color: white;
 	padding-top: 40px;
 	line-height: 1.5;
+	font-family: 'Fredericka the Great';
+	font-size: 20px;
+	max-width: 50%;
+	margin: 0 auto;
 }
 .bottles {
 	display: flex;
 	height: 55vh;
 	width: min-content;
+	padding-top: 44px;
 }
 
 .bottle-div {
@@ -37,7 +34,7 @@
 }
 
 .Bottle {
-	height: 48vh;
+	height: 44vh;
 	width: auto;
 }
 .drink-type {
@@ -49,14 +46,14 @@
 }
 
 .bottle-div:nth-child(2) {
-	transform: translateX(37.5vw) translateY(5vh) rotate(-22.5deg);
+	transform: translateX(37vw) translateY(5vh) rotate(-22.5deg);
 }
 
 .bottle-div:nth-child(3) {
 	transform: translateX(41vw) translateY(2vh) rotate(-5deg);
 }
 .bottle-div:nth-child(4) {
-	transform: translateX(45vw) translateY(1.5vh) rotate(5deg);
+	transform: translateX(47vw) translateY(1.5vh) rotate(5deg);
 }
 .bottle-div:nth-child(5) {
 	transform: translateX(55vw) translateY(1.5vh) rotate(22.5deg);
@@ -73,7 +70,7 @@
 
 .drink-list {
 	margin: 90px auto 30px;
-	background: yellow;
+
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -101,8 +98,20 @@
 	box-shadow: rgba(0, 0, 0, 1) 0 12px 30px;
 }
 @media screen and (max-width: 768px) {
+	.drinks-intro {
+		height: 150px;
+
+		padding-top: 50px;
+		line-height: 1.5;
+		font-size: 16px;
+		max-width: 50%;
+	}
+
+	.bottles {
+		padding-top: 45px;
+	}
 	.Bottle {
-		height: 44vh;
+		height: 40vh;
 	}
 
 	.bottle-div:nth-child(1) {
@@ -117,7 +126,7 @@
 		transform: translateX(40vw) translateY(0vh) rotate(-5deg);
 	}
 	.bottle-div:nth-child(4) {
-		transform: translateX(45vw) translateY(0vh) rotate(5deg);
+		transform: translateX(47vw) translateY(0vh) rotate(5deg);
 	}
 	.bottle-div:nth-child(5) {
 		transform: translateX(57vw) translateY(0.5vh) rotate(22.5deg);
@@ -127,29 +136,35 @@
 		transform: translateX(62vw) translateY(2vh) rotate(35deg);
 	}
 }
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 436px) {
 	.Bottle {
 		height: 30vh;
 	}
 	.bottle-div:nth-child(1) {
-		transform: translateX(14vw) translateY(40vh);
+		transform: translateX(14vw) translateY(35vh);
 	}
 
 	.bottle-div:nth-child(2) {
-		transform: translateX(43vw) translateY(40vh);
+		transform: translateX(43vw) translateY(35vh);
 	}
 
 	.bottle-div:nth-child(3) {
-		transform: translateX(67vw) translateY(40vh);
+		transform: translateX(67vw) translateY(35vh);
 	}
 	.bottle-div:nth-child(4) {
-		transform: translateX(37vw) translateY(2vh);
+		transform: translateX(41vw) translateY(-5vh);
 	}
 	.bottle-div:nth-child(5) {
-		transform: translateX(31vw) translateY(20vh);
+		transform: translateX(31vw) translateY(15vh);
 	}
 
 	.bottle-div:nth-child(6) {
-		transform: translateX(53vw) translateY(20vh);
+		transform: translateX(53vw) translateY(15vh);
+	}
+
+	.drinks-intro {
+		padding-top: 25px;
+		max-width: 75%;
+		font-size: 16px;
 	}
 }

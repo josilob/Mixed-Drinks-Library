@@ -1,2 +1,42 @@
+.About {
+	padding-top: 40px;
+	line-height: 1.7;
+	background: url('https://i.stack.imgur.com/p9mUO.jpg');
+	background-position: center center;
+	min-height: 95vh;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.about-text {
+	font-family: 'Fredericka the Great';
+	font-size: 26px;
+	text-align: center;
+	margin-top: 0px;
+	width: 60%;
+	margin: 0 auto;
+	color: white;
+}
+.ga-logo {
+	display: block;
+	width: 15%;
+	margin: 10px auto;
+}
+
+@media screen and (max-width: 768px) {
+	.about-text {
+		font-size: 20px;
+		width: 70%;
+		margin: 0 auto;
+	}
+	.ga-logo {
+		width: 20%;
+	}
+}
+
 @media screen and (max-width: 425px) {
+	.about-text {
+		font-size: 16px;
+		width: 70%;
+	}
 }
