@@ -32,14 +32,25 @@
 	cursor: pointer;
 	display: block;
 	width: 0;
+	position: absolute;
+	text-align: center;
+}
+.drink-type {
+	font-family: 'Fredericka the Great';
+	color: white;
+	width: 100px;
+	margin: 0 auto;
+	opacity: 0;
+}
+.bottle-div:hover .drink-type {
+	opacity: 1;
+	transform: translateY(-35px);
+	transition: opacity 0.5s, transform 0.2s ease-out;
 }
 
 .Bottle {
 	height: 44vh;
 	width: auto;
-}
-.drink-type {
-	width: 100%;
 }
 
 .bottle-div:nth-child(1) {
@@ -95,6 +106,22 @@
 	border-radius: 5px;
 	box-shadow: rgba(0, 0, 0, 1) 0 12px 30px;
 	text-decoration: none;
+}
+
+#vodka {
+	padding-left: 50px;
+}
+#tequila {
+	padding-left: 25px;
+}
+#bourbon {
+	padding-left: 30px;
+}
+#rum {
+	padding-left: 5px;
+}
+#scotch {
+	padding-left: 40px;
 }
 @media screen and (max-width: 769px) {
 	.drinks-intro {
@@ -179,5 +206,30 @@
 		height: 50px;
 		padding: 5px;
 		margin: 10px;
+	}
+}
+
+@media screen and (min-width: 1300px) {
+	.bottle-div:hover .drink-type {
+		opacity: 1;
+		transform: translateY(-100px);
+	}
+	#vodka {
+		padding-left: 110px;
+	}
+	#gin {
+		padding-left: 75px;
+	}
+	#tequila {
+		padding-left: 75px;
+	}
+	#bourbon {
+		padding-left: 90px;
+	}
+	#rum {
+		padding-left: 70px;
+	}
+	#scotch {
+		padding-left: 100px;
 	}
 }
