@@ -10,6 +10,12 @@
 	border-radius: 15%;
 	border-style: groove;
 }
+.drinkName {
+	font-family: 'Fredericka the Great';
+}
+.ingr-list {
+	font-family: 'Fredericka the Great';
+}
 
 .ingredients {
 	display: flex;
@@ -18,15 +24,19 @@
 	font-weight: 500;
 	letter-spacing: 1px;
 	font-size: 20px;
+	font-family: 'Fredericka the Great';
 }
 .instructions {
 	font-size: 22px;
 	width: 30vw;
 	margin: 0 auto;
+	margin-bottom: 15px;
+	padding: 35px 0;
+	font-family: 'Fredericka the Great';
+	width: 45%;
 }
 
 @media screen and (max-width: 425px) {
-
 	.drinkName {
 		font-size: 24px;
 		padding-top: 30px;

@@ -40,17 +40,19 @@ function Cocktail(props) {
 
 	return (
 		<div className='Cocktail'>
-			<h1 className='drinkName'>{details.strDrink}</h1>
-			<img className='drink-img' src={details.strDrinkThumb} alt='drink' />
-			<div>
-				<h3 className='ingr-list'>List of ingredients:</h3>
-				{ingredients.map((element, index) => (
-					<div key={index} className='ingredients'>
-						<h4>{element.ingredientName}</h4>
-						{' : '}
-						<p>{element.ingredientMeasure}</p>
-					</div>
-				))}
+			<div className='drink-card'>
+				<h1 className='drinkName'>{details.strDrink}</h1>
+				<img className='drink-img' src={details.strDrinkThumb} alt='drink' />
+				<div>
+					<h3 className='ingr-list'>List of ingredients:</h3>
+					{ingredients.map((element, index) => (
+						<div key={index} className='ingredients'>
+							<h4>{element.ingredientName} :</h4>
+
+							<p> &nbsp;{element.ingredientMeasure}</p>
+						</div>
+					))}
+				</div>
 			</div>
 			<p className='instructions'>{details.strInstructions}</p>
 		</div>
