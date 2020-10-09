@@ -21,13 +21,11 @@ function Cocktail(props) {
 
 	React.useEffect(() => {
 		listIngr();
-		console.log('details log', details);
 	}, [details]);
 
 	const listIngr = () => {
 		let ingr = [];
 		for (let i = 1; i < 16; i++) {
-			console.log('New string log', details[`strIngredient${i}`]);
 			if (details[`strIngredient${i}`] == null) break;
 			ingr.push({
 				ingredientName: details[`strIngredient${i}`],
@@ -35,7 +33,6 @@ function Cocktail(props) {
 			});
 		}
 		setIngredients(ingr);
-		console.log('ingredients', ingr);
 	};
 
 	return (

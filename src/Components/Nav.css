@@ -4,7 +4,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.2rem;
+	font-size: 22px;
 }
 
 .nav-menu {
@@ -28,7 +28,7 @@
 .nav-links {
 	color: white;
 	text-decoration: none;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 14px;
 	font-family: 'Fredericka the Great';
 }
 
@@ -103,5 +103,10 @@
 	.fa-times {
 		color: #fff;
 		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.header-title {
 	}
 }

@@ -14,7 +14,7 @@
 	font-family: 'Fredericka the Great';
 	margin: 0 auto;
 	text-align: center;
-	margin-top: 10px;
+	margin-top: 0px;
 	width: 65%;
 	color: white;
 	font-size: 26px;
@@ -30,10 +30,14 @@
 }
 .home-img2 {
 	width: 28vw;
-	filter: invert(0);
 	position: absolute;
 	left: 36%;
-	bottom: 5%;
+	bottom: 2%;
+}
+@media screen and (max-width: 1100px) {
+	.Home {
+		background-position: -60% 30vh;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -73,5 +77,11 @@
 		width: 65%;
 		font-size: 18px;
 		line-height: 1.6;
+	}
+}
+@media screen and (min-width: 1440px) {
+	.home-intro {
+		width: 40%;
+		padding-top: 60px;
 	}
 }

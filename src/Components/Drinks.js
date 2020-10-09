@@ -11,7 +11,6 @@ function Drinks() {
 		fetch(`${urlBase}${spirit}`)
 			.then((response) => response.json())
 			.then((data) => {
-				console.log(data.drinks);
 				setDrinksData(data.drinks);
 			});
 	};
