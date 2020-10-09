@@ -79,7 +79,7 @@
 		line-height: 1.6;
 	}
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1700px) {
 	.home-intro {
 		width: 40%;
 		padding-top: 60px;

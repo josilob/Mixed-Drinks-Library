@@ -43,3 +43,12 @@
 		width: 50%;
 	}
 }
+
+@media screen and (min-width: 1700px) {
+	.About {
+		padding-top: 100px;
+	}
+	.about-text {
+		line-height: 3;
+	}
+}
