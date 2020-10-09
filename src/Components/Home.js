@@ -14,11 +14,6 @@ function Home() {
 					taste and occasion. <br />
 					Just a shake, stir or pour away.
 				</p>
-				<img
-					className='home-img2'
-					src='https://cdn.shopify.com/s/files/1/1795/8271/products/mixed_drinks_760x.png?v=1507487749%27'
-					alt='img'
-				/>
 
 				<img
 					className='home-img'
