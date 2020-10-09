@@ -52,6 +52,7 @@ function Cocktail(props) {
 				</div>
 			</div>
 			<p className='instructions'>{details.strInstructions}</p>
+			<br />
 		</div>
 	);
 }
