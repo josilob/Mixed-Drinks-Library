@@ -29,7 +29,7 @@ function Nav() {
 						About
 					</Link>
 				</li>
-			</ul>{' '}
+			</ul>
 		</nav>
 	);
 }

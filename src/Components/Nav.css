@@ -1,19 +1,22 @@
 .navbar {
 	background: rgb(7, 7, 7);
-	height: 99%;
+	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 22px;
+	width: 40%;
+	max-width: 350px;
 }
 
 .nav-menu {
-	display: grid;
-	grid-template-columns: repeat(3, auto);
-	grid-gap: 10px;
+	display: flex;
+	/* grid-template-columns: repeat(3, auto); */
+	/* grid-gap: 10px; */
+	justify-content: space-around;
 	list-style: none;
 	text-align: center;
-	width: 300px;
+	width: 100%;
 	justify-content: start;
 	margin-right: 20px;
 }
@@ -69,6 +72,7 @@
 		opacity: 1;
 		transition: all 0.5s ease;
 		z-index: 1;
+		max-height: calc(100vh - 92px);
 	}
 
 	.nav-links {

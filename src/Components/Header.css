@@ -9,10 +9,9 @@
 .cheers {
 	filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(128deg)
 		brightness(105%) contrast(105%);
-	height: 65px;
+	height: 100%;
 	width: auto;
-	padding-left: 20px;
-	padding-top: 10px;
+	padding-left: 10px;
 }
 
 .header-title {
@@ -36,15 +35,9 @@
 }
 
 @media screen and (max-width: 768px) {
-	.Header {
-		height: 60px;
-	}
-
 	.header-title {
 		font-size: 28px;
-		margin-left: -0%;
 		padding-top: 2px;
-		width: 60%;
 	}
 	.cheers {
 		height: 60px;
@@ -63,6 +56,8 @@
 @media screen and (min-width: 1700px) {
 	.header-title {
 		font-size: 42px;
-		margin-left: 24%;
+	}
+	.Header {
+		height: 80px;
 	}
 }

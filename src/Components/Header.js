@@ -8,9 +8,9 @@ function Header() {
 		<div className='Header'>
 			<Link to='/'>
 				<img
-					src='../Components/images/cheers.png'
-					alt='cheers'
 					className='cheers'
+					src={require('./images/cheers.png')}
+					alt='cheers'
 				/>
 			</Link>
 			<h1 className='header-title'>Mixed Drinks Library</h1>
