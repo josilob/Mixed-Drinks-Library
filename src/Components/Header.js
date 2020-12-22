@@ -8,9 +8,9 @@ function Header() {
 		<div className='Header'>
 			<Link to='/'>
 				<img
-					src='https://static.thenounproject.com/png/95369-200.png'
+					src='../Components/images/cheers.png'
 					alt='cheers'
-					className='cheers '
+					className='cheers'
 				/>
 			</Link>
 			<h1 className='header-title'>Mixed Drinks Library</h1>

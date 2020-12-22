@@ -2,7 +2,7 @@
 	display: grid;
 	background-image: url('https://images.pexels.com/photos/274192/pexels-photo-274192.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
 	background-position: center center;
-	min-height: 91.5vh;
+	min-height: calc(100vh - 112px);
 	min-width: 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
