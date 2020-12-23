@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/mixed-drinks-library/static/css/main.e707e8af.chunk.css",
+    "main.js": "/mixed-drinks-library/static/js/main.dbd43b0a.chunk.js",
+    "main.js.map": "/mixed-drinks-library/static/js/main.dbd43b0a.chunk.js.map",
+    "runtime-main.js": "/mixed-drinks-library/static/js/runtime-main.3f4bca7e.js",
+    "runtime-main.js.map": "/mixed-drinks-library/static/js/runtime-main.3f4bca7e.js.map",
+    "static/js/2.f2565ca3.chunk.js": "/mixed-drinks-library/static/js/2.f2565ca3.chunk.js",
+    "static/js/2.f2565ca3.chunk.js.map": "/mixed-drinks-library/static/js/2.f2565ca3.chunk.js.map",
+    "index.html": "/mixed-drinks-library/index.html",
+    "static/css/main.e707e8af.chunk.css.map": "/mixed-drinks-library/static/css/main.e707e8af.chunk.css.map",
+    "static/js/2.f2565ca3.chunk.js.LICENSE.txt": "/mixed-drinks-library/static/js/2.f2565ca3.chunk.js.LICENSE.txt",
+    "static/media/About.css": "/mixed-drinks-library/static/media/about-bg.67dd835a.jpg",
+    "static/media/bourbon.png": "/mixed-drinks-library/static/media/bourbon.7ed956c0.png",
+    "static/media/Drinks.css": "/mixed-drinks-library/static/media/drinks-bg.609a8982.jpeg",
+    "static/media/gin.png": "/mixed-drinks-library/static/media/gin.1305405c.png",
+    "static/media/rum.png": "/mixed-drinks-library/static/media/rum.0336e36f.png",
+    "static/media/scotch.png": "/mixed-drinks-library/static/media/scotch.2f8650eb.png",
+    "static/media/tequila.png": "/mixed-drinks-library/static/media/tequila.d8573a12.png",
+    "static/media/vodka.png": "/mixed-drinks-library/static/media/vodka.db05ef10.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f4bca7e.js",
+    "static/js/2.f2565ca3.chunk.js",
+    "static/css/main.e707e8af.chunk.css",
+    "static/js/main.dbd43b0a.chunk.js"
+  ]
+}
