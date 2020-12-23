@@ -9,7 +9,7 @@ function Header() {
 			<Link to='/'>
 				<img
 					className='cheers'
-					src={require('./images/cheers.png')}
+					src={'https://i.imgur.com/8cJ05ib.png'}
 					alt='cheers'
 				/>
 			</Link>

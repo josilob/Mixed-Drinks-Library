@@ -32,7 +32,7 @@ function Drinks() {
 					<img
 						onClick={() => filterDrink('tequila')}
 						className='Bottle'
-						src={require('./images/tequila.png')}
+						src={'https://i.imgur.com/PpbaQpO.png'}
 						alt='bottle'
 					/>
 				</div>
@@ -44,7 +44,7 @@ function Drinks() {
 					<img
 						onClick={() => filterDrink('rum')}
 						className='Bottle'
-						src={require('./images/rum.png')}
+						src={'https://i.imgur.com/hP8gk82.png'}
 						alt='bottle'
 					/>
 				</div>
@@ -56,7 +56,7 @@ function Drinks() {
 					<img
 						onClick={() => filterDrink('vodka')}
 						className='Bottle'
-						src={require('./images/vodka.png')}
+						src={'https://i.imgur.com/oDPqjBq.png'}
 						alt='bottle'
 					/>
 				</div>
@@ -68,7 +68,7 @@ function Drinks() {
 					<img
 						onClick={() => filterDrink('gin')}
 						className='Bottle'
-						src={require('./images/gin.png')}
+						src={'https://i.imgur.com/Bqd35EH.png'}
 						alt='bottle'
 					/>
 				</div>
@@ -80,7 +80,7 @@ function Drinks() {
 					<img
 						onClick={() => filterDrink('scotch')}
 						className='Bottle'
-						src={require('./images/scotch.png')}
+						src={'https://i.imgur.com/ilMdLXX.png'}
 						alt=''
 					/>
 				</div>
@@ -92,7 +92,7 @@ function Drinks() {
 					<img
 						onClick={() => filterDrink('bourbon')}
 						className='Bottle'
-						src={require('./images/bourbon.png')}
+						src={'https://i.imgur.com/jSXQNvP.png'}
 						alt='bottle'
 					/>
 				</div>
