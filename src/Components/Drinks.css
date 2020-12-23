@@ -6,13 +6,13 @@
 	min-width: 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: cover;
 	overflow: hidden;
 }
 .drinks-intro {
 	text-align: center;
 	color: white;
-	padding-top: 40px;
+	padding-top: 20px;
 	line-height: 1.5;
 	font-family: 'Fredericka the Great';
 	font-size: 20px;
@@ -21,20 +21,21 @@
 }
 .bottles {
 	display: flex;
-	height: 34vh;
-	width: min-content;
+	justify-content: space-around;
+	width: 90vw;
+	max-width: 1200px;
 	margin-top: 50px;
 	position: relative;
+	margin: 0 auto;
+	height: 600px;
 }
 
 .bottle-div {
 	transform-origin: bottom;
 	cursor: pointer;
-	display: block;
-	width: 0;
-	position: absolute;
 	text-align: center;
 }
+
 .drink-type {
 	font-family: 'Fredericka the Great';
 	color: white;
@@ -42,6 +43,7 @@
 	margin: 0 auto;
 	opacity: 0;
 }
+
 .bottle-div:hover .drink-type {
 	opacity: 1;
 	transform: translateY(-35px);
@@ -49,31 +51,31 @@
 }
 
 .Bottle {
-	height: 44vh;
+	height: 350px;
 	width: auto;
 }
 
-/* .bottle-div:nth-child(1) {
-	transform: scale(0.92) translateX(30vw) translateY(13vh) rotate(-35deg);
-} */
+.bottle-div:nth-child(1) {
+	transform: scale(0.92) translateX(290px) translateY(70px) rotate(-20.5deg);
+}
 
-/* .bottle-div:nth-child(2) {
-	transform: translateX(37vw) translateY(5vh) rotate(-22.5deg);
-} */
+.bottle-div:nth-child(2) {
+	transform: translateX(200px) translateY(40px) rotate(-17.5deg);
+}
 
 .bottle-div:nth-child(3) {
-	transform: translateX(41vw) translateY(2vh) rotate(-5deg);
+	transform: translateX(60px) translateY(30px) rotate(-5deg);
 }
 .bottle-div:nth-child(4) {
-	transform: translateX(47vw) translateY(1.5vh) rotate(5deg);
+	transform: translateX(-60px) translateY(30px) rotate(5deg);
 }
-/* .bottle-div:nth-child(5) {
-	transform: translateX(55vw) translateY(1.5vh) rotate(22.5deg);
-} */
+.bottle-div:nth-child(5) {
+	transform: translateX(-210px) translateY(40px) rotate(17.5deg);
+}
 
-/* .bottle-div:nth-child(6) {
-	transform: translateX(59vw) translateY(2vh) rotate(35deg);
-} */
+.bottle-div:nth-child(6) {
+	transform: translateX(-340px) translateY(70px) rotate(24.5deg);
+}
 
 .Bottle:hover {
 	transform: scale(1.1);
@@ -83,12 +85,13 @@
 	text-decoration: none;
 }
 .drink-list {
-	margin: 300px auto 30px;
+	margin: 0px auto 30px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	text-align: center;
 	justify-content: space-evenly;
+	max-width: 1600px;
 }
 
 .cocktail-list-name {
@@ -108,21 +111,6 @@
 	text-decoration: none;
 }
 
-#vodka {
-	padding-left: 50px;
-}
-#tequila {
-	padding-left: 25px;
-}
-#bourbon {
-	padding-left: 30px;
-}
-#rum {
-	padding-left: 5px;
-}
-#scotch {
-	padding-left: 40px;
-}
 @media screen and (max-width: 769px) {
 	.drinks-intro {
 		height: 150px;
