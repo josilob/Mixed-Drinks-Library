@@ -11,9 +11,9 @@ function About() {
 			</p>
 
 			<p className='about-text'>
-				Created during the second week of studying React. This project is an
-				example of applying functional components and React Hooks as a new
-				features.
+				Created after two weeks of learning React. <br />
+				This project is an example of applying functional components and React
+				Hooks as a new features.
 			</p>
 
 			<p className='about-text'>

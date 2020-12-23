@@ -4,6 +4,11 @@
 	justify-content: space-between;
 	height: 60px;
 	width: 100%;
+	position: relative;
+}
+
+.Header > a {
+	width: 0;
 }
 
 .cheers {
@@ -23,6 +28,7 @@
 	font-family: 'Fredericka the Great';
 	margin-top: 1.5vh;
 }
+
 .fas {
 	color: white;
 }

@@ -1,16 +1,15 @@
 .Drinks {
 	display: grid;
-	background-image: url('https://images.pexels.com/photos/274192/pexels-photo-274192.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+	background-image: url('./images/drinks-bg.jpeg');
 	background-position: center center;
-	min-height: calc(100vh - 112px);
+	min-height: calc(100vh - 92px);
 	min-width: 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% 100%;
 	overflow: hidden;
 }
 .drinks-intro {
-	height: 150px;
 	text-align: center;
 	color: white;
 	padding-top: 40px;
@@ -25,6 +24,7 @@
 	height: 34vh;
 	width: min-content;
 	margin-top: 50px;
+	position: relative;
 }
 
 .bottle-div {
@@ -53,13 +53,13 @@
 	width: auto;
 }
 
-.bottle-div:nth-child(1) {
-	transform: translateX(30vw) translateY(13vh) rotate(-35deg);
-}
+/* .bottle-div:nth-child(1) {
+	transform: scale(0.92) translateX(30vw) translateY(13vh) rotate(-35deg);
+} */
 
-.bottle-div:nth-child(2) {
+/* .bottle-div:nth-child(2) {
 	transform: translateX(37vw) translateY(5vh) rotate(-22.5deg);
-}
+} */
 
 .bottle-div:nth-child(3) {
 	transform: translateX(41vw) translateY(2vh) rotate(-5deg);
@@ -67,13 +67,13 @@
 .bottle-div:nth-child(4) {
 	transform: translateX(47vw) translateY(1.5vh) rotate(5deg);
 }
-.bottle-div:nth-child(5) {
+/* .bottle-div:nth-child(5) {
 	transform: translateX(55vw) translateY(1.5vh) rotate(22.5deg);
-}
+} */
 
-.bottle-div:nth-child(6) {
+/* .bottle-div:nth-child(6) {
 	transform: translateX(59vw) translateY(2vh) rotate(35deg);
-}
+} */
 
 .Bottle:hover {
 	transform: scale(1.1);
@@ -134,7 +134,11 @@
 
 	.bottles {
 		padding-top: 45px;
-		height: 500px;
+		height: 350px;
+		max-width: 1200px;
+		margin: 0 auto;
+		border: red solid 1px !important;
+		position: relative;
 	}
 	.Bottle {
 		height: 250px;
@@ -263,7 +267,7 @@
 	}
 }
 
-@media screen and (min-width: 1700px) {
+/* @media screen and (min-width: 1700px) {
 	.bottle-div:hover .drink-type {
 		opacity: 1;
 		transform: translateY(-100px);
@@ -289,4 +293,4 @@
 	.drink-list {
 		margin-top: 600px;
 	}
-}
+} */
