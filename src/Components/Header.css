@@ -21,12 +21,12 @@
 
 .header-title {
 	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
+	right: 50%;
+	top: 50%;
+	transform: translateX(50%) translateY(-50%);
 	color: white;
 	font-size: 36px;
 	font-family: 'Fredericka the Great';
-	margin-top: 1.5vh;
 }
 
 .fas {
@@ -44,6 +44,7 @@
 	.header-title {
 		font-size: 28px;
 		padding-top: 2px;
+		white-space: nowrap;
 	}
 	.cheers {
 		height: 60px;
@@ -53,7 +54,6 @@
 @media screen and (max-width: 425px) {
 	.header-title {
 		font-size: 20px;
-		width: 65%;
 		margin-left: -15%;
 		padding-top: 5px;
 	}

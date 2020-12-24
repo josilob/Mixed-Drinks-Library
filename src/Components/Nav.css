@@ -27,14 +27,15 @@
 }
 
 .nav-links {
-	color: white;
+	color: #fff;
 	text-decoration: none;
-	padding: 0.5rem 14px;
+	padding: 8px 14px;
 	font-family: 'Fredericka the Great';
 }
 
 .nav-links:hover {
-	background-color: #1888ff;
+	background-color: rgb(240, 240, 240);
+	color: rgb(7, 7, 7);
 	border-radius: 4px;
 	transition: all 0.2s ease-out;
 }
@@ -50,8 +51,20 @@
 .menu-icon {
 	display: none;
 }
+@media screen and (max-width: 1024px) {
+	.navbar {
+		font-size: 20px;
+		max-width: 250px;
+	}
+	.nav-links {
+		padding: 5px 8px;
+	}
+}
 
 @media screen and (max-width: 768px) {
+	.navbar {
+		max-width: 75px;
+	}
 	.nav-menu {
 		display: flex;
 		flex-direction: column;
