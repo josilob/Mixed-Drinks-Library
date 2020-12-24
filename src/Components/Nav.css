@@ -23,7 +23,7 @@
 	align-items: center;
 	height: 100%;
 	line-height: 20px;
-	margin: auto;
+	margin: 10px auto;
 }
 
 .nav-links {
@@ -87,6 +87,7 @@
 	}
 	.nav-item {
 		height: 50px;
+		margin: 20px auto;
 	}
 	.nav-links {
 		text-align: center;
