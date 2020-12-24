@@ -3,7 +3,7 @@
 	background: black;
 	background-image: url('https://images.pond5.com/cocktail-lime-black-background-footage-023977545_prevstill.jpeg');
 	background-position: -60% 20vh;
-	height: calc(100vh - 92px);
+	min-height: 100vh ;
 	min-width: 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
