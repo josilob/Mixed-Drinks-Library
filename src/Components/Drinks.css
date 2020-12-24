@@ -121,11 +121,10 @@
 	}
 
 	.bottles {
-		padding-top: 45px;
-		height: 350px;
+		padding-top: 65px;
+		height: 450px;
 		max-width: 1200px;
 		margin: 0 auto;
-		border: red solid 1px !important;
 		position: relative;
 	}
 	.Bottle {
@@ -133,111 +132,73 @@
 	}
 
 	.bottle-div:nth-child(1) {
-		transform: translateX(21vw) translateY(11vh) rotate(-30deg);
+		transform: scale(0.92) translateX(150px) translateY(70px) rotate(-20.5deg);
 	}
 
 	.bottle-div:nth-child(2) {
-		transform: translateX(31vw) translateY(4vh) rotate(-20deg);
+		transform: translateX(110px) translateY(40px) rotate(-17.5deg);
 	}
 
 	.bottle-div:nth-child(3) {
-		transform: translateX(37vw) translateY(0vh) rotate(-8deg);
+		transform: translateX(40px) translateY(30px) rotate(-5deg);
 	}
 	.bottle-div:nth-child(4) {
-		transform: translateX(47vw) translateY(0vh) rotate(8deg);
+		transform: translateX(-20px) translateY(30px) rotate(5deg);
 	}
 	.bottle-div:nth-child(5) {
-		transform: translateX(59vw) translateY(0.5vh) rotate(22.5deg);
+		transform: translateX(-90px) translateY(40px) rotate(17.5deg);
 	}
 
 	.bottle-div:nth-child(6) {
-		transform: translateX(65vw) translateY(2vh) rotate(30deg);
+		transform: translateX(-150px) translateY(70px) rotate(24.5deg);
 	}
 	.drink-type {
 		transition: none;
 		opacity: 1;
 		transform: translateY(-20px);
 	}
-	#vodka {
-		padding-left: 30px;
-	}
-	#gin {
-		margin-left: -10px;
-	}
-	#tequila {
-		padding-left: 10px;
-	}
-	#bourbon {
-		padding-left: 10px;
-	}
-	#rum {
-		margin-left: -5px;
-	}
-	#scotch {
-		padding-left: 20px;
-	}
 }
-@media screen and (max-width: 436px) {
+@media screen and (max-width: 520px) {
 	.Drinks {
 		background-image: url('https://www.desktopbackground.org/p/2010/06/13/32467_oppo-r7-wallpaper-jack-daniels-whiskey-mobile-android-wallpapers_1080x1920_h.jpg');
 		background-position: center 30%;
+		min-height: 100vh;
 	}
 	.drinks-intro {
 	}
 	.bottles {
-		height: 300px;
-		margin-top: 00px;
+		height: 450px;
+		width: 100vw;
+		margin-top: 75px;
 	}
 	.Bottle {
 		height: 30vh;
 		width: auto;
 	}
+
 	.bottle-div:nth-child(1) {
-		transform: translateX(14vw) translateY(35vh);
+		left: 33%;
+		transform: scale(0.92) translateX(30vw) translateY(140px);
 	}
-
-	.bottle-div:nth-child(2) {
-		transform: translateX(43vw) translateY(35vh);
-	}
-
 	.bottle-div:nth-child(3) {
-		transform: translateX(67vw) translateY(35vh);
+		transform: translateX(7vw) translateY(140px);
 	}
+	.bottle-div:nth-child(6) {
+		transform: translateX(-34vw) translateY(140px);
+	}
+	.bottle-div:nth-child(2) {
+		transform: translateX(16vw) translateY(-30px);
+	}
+
 	.bottle-div:nth-child(4) {
-		transform: translateX(41vw) translateY(-5vh);
+		transform: translateX(0vw) translateY(-30px);
 	}
 	.bottle-div:nth-child(5) {
-		transform: translateX(31vw) translateY(15vh);
+		transform: translateX(-164px) translateY(-140px);
 	}
 
-	.bottle-div:nth-child(6) {
-		transform: translateX(53vw) translateY(15vh);
-	}
 	.drink-type {
 		font-size: 14px;
-	}
-	#vodka {
-		margin-left: -70px;
-		transform: translateY(40px);
-	}
-	#gin {
-		margin-left: -20px;
-		transform: translateY(240px);
-	}
-	#tequila {
-		padding-left: 60px;
-		transform: translateY(40px);
-	}
-	#bourbon {
-		margin-left: -10px;
-	}
-	#rum {
-		margin-left: -75px;
-		transform: translateY(0px);
-	}
-	#scotch {
-		margin-left: 55px;
-		transform: translateY(0px);
 	}
 
 	.drinks-intro {
@@ -256,29 +217,5 @@
 }
 
 /* @media screen and (min-width: 1700px) {
-	.bottle-div:hover .drink-type {
-		opacity: 1;
-		transform: translateY(-100px);
-	}
-	#vodka {
-		padding-left: 110px;
-	}
-	#gin {
-		padding-left: 75px;
-	}
-	#tequila {
-		padding-left: 75px;
-	}
-	#bourbon {
-		padding-left: 90px;
-	}
-	#rum {
-		padding-left: 70px;
-	}
-	#scotch {
-		padding-left: 100px;
-	}
-	.drink-list {
-		margin-top: 600px;
-	}
+
 } */
