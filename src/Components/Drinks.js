@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './Drinks.css';
 
 function Drinks() {
@@ -7,13 +8,15 @@ function Drinks() {
 
 	const [drinksData, setDrinksData] = React.useState([]);
 
-	const filterDrink = (spirit) => {
-		fetch(`${urlBase}${spirit}`)
-			.then((response) => response.json())
-			.then((data) => {
-				setDrinksData(data.drinks);
-			});
-	};
+	async function filterDrink(spirit) {
+		try {
+			const { data } = await axios(`${urlBase}${spirit}`);
+			console.log(data);
+			setDrinksData(data.drinks);
+		} catch (err) {
+			console.log(err);
+		}
+	}
 
 	return (
 		<div className='Drinks'>
