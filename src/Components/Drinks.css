@@ -164,8 +164,7 @@
 		background-position: center 30%;
 		min-height: 100vh;
 	}
-	.drinks-intro {
-	}
+
 	.bottles {
 		height: 450px;
 		width: 100vw;
@@ -216,6 +215,8 @@
 	}
 }
 
-/* @media screen and (min-width: 1700px) {
-
-} */
+@media screen and (min-width: 1700px) {
+	.drinks-intro h2 {
+		max-width: 800px;
+	}
+}

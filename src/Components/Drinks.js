@@ -18,11 +18,12 @@ function Drinks() {
 	return (
 		<div className='Drinks'>
 			<div className='drinks-intro'>
-				<h2 className='instruction'>
+				<h2>
 					Choose your favorite spirit below and our bartender will come up with
 					an idea!
+					<br />
+					Cheers!
 				</h2>
-				<h2>Cheers!</h2>
 			</div>
 			<div className='bottles'>
 				<div className='bottle-div'>
@@ -30,7 +31,12 @@ function Drinks() {
 						TEQUILA
 					</h3>
 					<img
-						onClick={() => filterDrink('tequila')}
+						onClick={() => {
+							filterDrink('tequila');
+							setTimeout(function () {
+								window.scrollTo(0, 850);
+							}, 250);
+						}}
 						className='Bottle'
 						src={'https://i.imgur.com/PpbaQpO.png'}
 						alt='bottle'
@@ -42,7 +48,12 @@ function Drinks() {
 						RUM
 					</h3>
 					<img
-						onClick={() => filterDrink('rum')}
+						onClick={() => {
+							filterDrink('rum');
+							setTimeout(function () {
+								window.scrollTo(0, 850);
+							}, 250);
+						}}
 						className='Bottle'
 						src={'https://i.imgur.com/hP8gk82.png'}
 						alt='bottle'
@@ -54,7 +65,12 @@ function Drinks() {
 						VODKA
 					</h3>
 					<img
-						onClick={() => filterDrink('vodka')}
+						onClick={() => {
+							filterDrink('vodka');
+							setTimeout(function () {
+								window.scrollTo(0, 850);
+							}, 250);
+						}}
 						className='Bottle'
 						src={'https://i.imgur.com/oDPqjBq.png'}
 						alt='bottle'
@@ -66,7 +82,12 @@ function Drinks() {
 						GIN
 					</h3>
 					<img
-						onClick={() => filterDrink('gin')}
+						onClick={() => {
+							filterDrink('gin');
+							setTimeout(function () {
+								window.scrollTo(0, 850);
+							}, 250);
+						}}
 						className='Bottle'
 						src={'https://i.imgur.com/Bqd35EH.png'}
 						alt='bottle'
@@ -78,7 +99,12 @@ function Drinks() {
 						SCOTCH
 					</h3>
 					<img
-						onClick={() => filterDrink('scotch')}
+						onClick={() => {
+							filterDrink('scotch');
+							setTimeout(function () {
+								window.scrollTo(0, 850);
+							}, 250);
+						}}
 						className='Bottle'
 						src={'https://i.imgur.com/ilMdLXX.png'}
 						alt=''
@@ -90,13 +116,19 @@ function Drinks() {
 						BOURBON
 					</h3>
 					<img
-						onClick={() => filterDrink('bourbon')}
+						onClick={() => {
+							filterDrink('bourbon');
+							setTimeout(function () {
+								window.scrollTo(0, 850);
+							}, 250);
+						}}
 						className='Bottle'
 						src={'https://i.imgur.com/jSXQNvP.png'}
 						alt='bottle'
 					/>
 				</div>
 			</div>
+
 			<div className='drink-list'>
 				{drinksData.map((element) => (
 					<Link

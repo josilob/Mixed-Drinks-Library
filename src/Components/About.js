@@ -7,13 +7,12 @@ function About() {
 			<h4 className='about-text'>About the project:</h4>
 
 			<p className='about-text'>
-				Project made with React and TheCocktailDB API
+				Project made with the ReactJS and TheCocktailDB API
 			</p>
 
 			<p className='about-text'>
-				Created after two weeks of learning React. <br />
-				This project is an example of applying functional components and React
-				Hooks as a new features.
+				The idea behind the project was to reinforce the knowledge of functional
+				components and react hooks as the most recent features in the ReactJS.
 			</p>
 
 			<p className='about-text'>
