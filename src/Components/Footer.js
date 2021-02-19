@@ -4,7 +4,6 @@ import './Footer.css';
 function Footer() {
 	return (
 		<footer>
-			<a href='#'></a>
 			<a href='https://github.com/josilob' target='_blank' rel='noreferrer'>
 				<i class='fab fa-github-square'> </i>
 			</a>

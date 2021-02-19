@@ -15,3 +15,8 @@ html {
 body {
 	height: 100%;
 }
+
+.fetch-loader {
+	height: 25vh;
+	margin: 0 auto;
+}

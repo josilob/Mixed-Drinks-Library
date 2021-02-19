@@ -4,7 +4,7 @@
 	color: white;
 	background-image: url('https://www.sitncharge.com/wp-content/uploads/2019/04/cropped-Fotolia_119561214_Subscription_Yearly_XXL_PLUS-2-2000x1014.jpg');
 	background-position: center center;
-	min-height: 92vh;
+	min-height: calc(100vh - 92px);
 	min-width: 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -14,7 +14,7 @@
 .drink-card {
 	width: 460px;
 	margin: 0 auto;
-	margin-top: 5%;
+	margin-top: 3%;
 	border-radius: 255px 15px 225px 15px/20px 225px 35px 255px;
 	border: solid 5px white;
 	padding: 20px;
@@ -26,6 +26,7 @@
 	border-radius: 15%;
 	border-style: groove;
 }
+
 .drinkName {
 	font-family: 'Fredericka the Great';
 	padding-top: 30px;
@@ -47,7 +48,6 @@
 }
 .instructions {
 	font-size: 22px;
-	width: 30vw;
 	margin: 0 auto;
 	margin-bottom: 15px;
 	padding: 35px 0;

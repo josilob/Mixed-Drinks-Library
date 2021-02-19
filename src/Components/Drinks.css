@@ -2,7 +2,7 @@
 	display: grid;
 	background-image: url('https://i.imgur.com/KDqIg97.jpg');
 	background-position: center center;
-	min-height: 100vh;
+	min-height: calc(100vh - 92px);
 	min-width: 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;

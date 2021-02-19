@@ -11,7 +11,6 @@ function Drinks() {
 	async function filterDrink(spirit) {
 		try {
 			const { data } = await axios(`${urlBase}${spirit}`);
-			console.log(data);
 			setDrinksData(data.drinks);
 		} catch (err) {
 			console.log(err);
@@ -22,8 +21,8 @@ function Drinks() {
 		<div className='Drinks'>
 			<div className='drinks-intro'>
 				<h2>
-					Choose your favorite spirit below and our bartender will come up with
-					an idea!
+					Choose your favorite spirit below and our bartender will come up with an
+					idea!
 					<br />
 					Cheers!
 				</h2>
