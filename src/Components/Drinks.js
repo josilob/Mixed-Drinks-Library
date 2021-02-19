@@ -22,9 +22,7 @@ function Drinks() {
 			<div className='drinks-intro'>
 				<h2>
 					Choose your favorite spirit below and our bartender will come up with an
-					idea!
-					<br />
-					Cheers!
+					idea. Cheers!
 				</h2>
 			</div>
 			<div className='bottles'>
@@ -36,7 +34,7 @@ function Drinks() {
 						onClick={() => {
 							filterDrink('tequila');
 							setTimeout(function () {
-								window.scrollTo(0, 850);
+								window.scrollTo(0, document.body.scrollHeight);
 							}, 250);
 						}}
 						className='Bottle'
