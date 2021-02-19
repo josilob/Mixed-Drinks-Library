@@ -1,8 +1,8 @@
 .Drinks {
 	display: grid;
 	background-image: url('https://i.imgur.com/KDqIg97.jpg');
-	background-position: center center;
-	min-height: calc(100vh - 92px);
+	background-position: center;
+	min-height: 100vh;
 	min-width: 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -171,29 +171,29 @@
 		margin-top: 75px;
 	}
 	.Bottle {
-		height: 30vh;
+		height: 180px;
 		width: auto;
 	}
 
 	.bottle-div:nth-child(1) {
-		left: 33%;
-		transform: scale(0.92) translateX(30vw) translateY(140px);
+		/* left: 33%; */
+		transform: scale(0.92) translateX(115%) translateY(140px);
 	}
 	.bottle-div:nth-child(3) {
-		transform: translateX(7vw) translateY(140px);
+		transform: translateX(40%) translateY(140px);
 	}
 	.bottle-div:nth-child(6) {
-		transform: translateX(-34vw) translateY(140px);
+		transform: translateX(-160%) translateY(140px);
 	}
 	.bottle-div:nth-child(2) {
-		transform: translateX(16vw) translateY(-30px);
+		transform: translateX(80%) translateY(-30px);
 	}
 
 	.bottle-div:nth-child(4) {
 		transform: translateX(0vw) translateY(-30px);
 	}
 	.bottle-div:nth-child(5) {
-		transform: translateX(-164px) translateY(-140px);
+		transform: translateX(-158%) translateY(-140px);
 	}
 
 	.drink-type {
