@@ -5,14 +5,14 @@ function Footer() {
 	return (
 		<footer>
 			<a href='https://github.com/josilob' target='_blank' rel='noreferrer'>
-				<i class='fab fa-github-square'> </i>
+				<i className='fab fa-github-square'> </i>
 			</a>
 			<p>-Bojan Josilo-</p>
 			<a
 				href='https://www.linkedin.com/in/josilo/'
 				target='_blank'
 				rel='noreferrer'>
-				<i class='fab fa-linkedin'> </i>
+				<i className='fab fa-linkedin'> </i>
 			</a>
 		</footer>
 	);

@@ -22,15 +22,6 @@
 	mix-blend-mode: difference;
 }
 
-.home-img {
-	width: 12vw;
-	filter: invert(1);
-	position: absolute;
-	right: 3%;
-	bottom: 5%;
-	min-width: 150px;
-}
-
 @media screen and (max-width: 1100px) {
 	.Home {
 		background-position: -60% 30vh;
@@ -41,13 +32,6 @@
 	.Home {
 		background-image: none;
 		background: black;
-	}
-
-	.home-img {
-		width: 16vw;
-		right: 50%;
-		transform: translateX(50%);
-		bottom: 8%;
 	}
 
 	.home-intro {
