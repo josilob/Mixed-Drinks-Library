@@ -2,6 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Drinks.css';
+import gin from '../images/gin-min.png';
+import vodka from '../images/vodka-min.png';
+import scotch from '../images/scotch-min.png';
+import bourbon from '../images/bourbon-min.png';
+import tequila from '../images/tequila-min.png';
+import rum from '../images/rum-min.png';
 
 function Drinks() {
 	const urlBase = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
@@ -38,7 +44,7 @@ function Drinks() {
 							}, 250);
 						}}
 						className='Bottle'
-						src={'https://i.imgur.com/PpbaQpO.png'}
+						src={tequila}
 						alt='bottle'
 					/>
 				</div>
@@ -55,7 +61,7 @@ function Drinks() {
 							}, 250);
 						}}
 						className='Bottle'
-						src={'https://i.imgur.com/hP8gk82.png'}
+						src={rum}
 						alt='bottle'
 					/>
 				</div>
@@ -72,7 +78,7 @@ function Drinks() {
 							}, 250);
 						}}
 						className='Bottle'
-						src={'https://i.imgur.com/oDPqjBq.png'}
+						src={vodka}
 						alt='bottle'
 					/>
 				</div>
@@ -89,7 +95,7 @@ function Drinks() {
 							}, 250);
 						}}
 						className='Bottle'
-						src={'https://i.imgur.com/Bqd35EH.png'}
+						src={gin}
 						alt='bottle'
 					/>
 				</div>
@@ -106,7 +112,7 @@ function Drinks() {
 							}, 250);
 						}}
 						className='Bottle'
-						src={'https://i.imgur.com/ilMdLXX.png'}
+						src={scotch}
 						alt=''
 					/>
 				</div>
@@ -123,7 +129,7 @@ function Drinks() {
 							}, 250);
 						}}
 						className='Bottle'
-						src={'https://i.imgur.com/jSXQNvP.png'}
+						src={bourbon}
 						alt='bottle'
 					/>
 				</div>
@@ -135,7 +141,7 @@ function Drinks() {
 						key={element.idDrink}
 						to={{
 							pathname: '/cocktail/' + element.strDrink,
-							state: { idDrink: element.idDrink },
+							state: { idDrink: element.idDrink }
 						}}>
 						<div className='cocktail-list-name'>{element.strDrink}</div>
 					</Link>

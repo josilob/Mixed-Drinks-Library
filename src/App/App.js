@@ -10,7 +10,7 @@ import About from '../Components/About';
 
 function App() {
 	return (
-		<>
+		<React.Fragment>
 			<Header />
 			<Switch>
 				<Route exact path='/'>
@@ -28,9 +28,8 @@ function App() {
 				/>
 			</Switch>
 			<Footer />
-		</>
+		</React.Fragment>
 	);
 }
 
 export default App;
-

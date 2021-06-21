@@ -1,7 +1,7 @@
 .About {
 	padding-top: 40px;
 	line-height: 2;
-	background: url('./images/about-bg.jpg');
+	background: url('../images/about-bg.jpg');
 	background-position: center center;
 	height: calc(100vh - 92px);
 	background-attachment: fixed;
