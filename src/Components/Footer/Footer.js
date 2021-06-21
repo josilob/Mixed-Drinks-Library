@@ -7,7 +7,7 @@ function Footer() {
 			<a href='https://github.com/josilob' target='_blank' rel='noreferrer'>
 				<i class='fab fa-github-square'> </i>
 			</a>
-			<p>Bojan Josilo -2020-</p>
+			<p>-Bojan Josilo-</p>
 			<a
 				href='https://www.linkedin.com/in/josilo/'
 				target='_blank'

@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Drinks.css';
-import gin from '../images/gin-min.png';
-import vodka from '../images/vodka-min.png';
-import scotch from '../images/scotch-min.png';
-import bourbon from '../images/bourbon-min.png';
-import tequila from '../images/tequila-min.png';
-import rum from '../images/rum-min.png';
+import gin from '../../images/gin-min.png';
+import vodka from '../../images/vodka-min.png';
+import scotch from '../../images/scotch-min.png';
+import bourbon from '../../images/bourbon-min.png';
+import tequila from '../../images/tequila-min.png';
+import rum from '../../images/rum-min.png';
 
 function Drinks() {
 	const urlBase = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';

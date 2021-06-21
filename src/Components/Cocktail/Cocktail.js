@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Loader from './Loader';
+import Loader from '../Loader/Loader';
 import './Cocktail.css';
 import axios from 'axios';
 
@@ -36,7 +36,7 @@ function Cocktail(props) {
 			if (details[`strIngredient${i}`] == null) break;
 			ingr.push({
 				ingredientName: details[`strIngredient${i}`],
-				ingredientMeasure: details[`strMeasure${i}`] || '',
+				ingredientMeasure: details[`strMeasure${i}`] || ''
 			});
 		}
 		setIngredients(ingr);
