@@ -2,7 +2,7 @@
 	display: grid;
 	background-image: url('https://i.imgur.com/KDqIg97.jpg');
 	background-position: center;
-	min-height: 100vh;
+	min-height: calc(100vh-92px);
 	min-width: 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -56,7 +56,7 @@
 }
 
 .bottle-div:nth-child(1) {
-	transform: scale(0.92) translateX(310px) translateY(55px) rotate(-24deg);
+	transform: translateX(290px) translateY(65px) rotate(-24deg);
 }
 
 .bottle-div:nth-child(2) {
@@ -128,11 +128,11 @@
 		position: relative;
 	}
 	.Bottle {
-		height: 250px;
+		height: 230px;
 	}
 
 	.bottle-div:nth-child(1) {
-		transform: scale(0.92) translateX(150px) translateY(70px) rotate(-20.5deg);
+		transform: translateX(150px) translateY(70px) rotate(-20.5deg);
 	}
 
 	.bottle-div:nth-child(2) {
@@ -175,9 +175,12 @@
 		width: auto;
 	}
 
+	.bottle-div {
+		height: 200px;
+	}
+
 	.bottle-div:nth-child(1) {
-		/* left: 33%; */
-		transform: scale(0.92) translateX(115%) translateY(140px);
+		transform: translateX(115%) translateY(140px);
 	}
 	.bottle-div:nth-child(3) {
 		transform: translateX(40%) translateY(140px);
@@ -188,7 +191,6 @@
 	.bottle-div:nth-child(2) {
 		transform: translateX(80%) translateY(-30px);
 	}
-
 	.bottle-div:nth-child(4) {
 		transform: translateX(0vw) translateY(-30px);
 	}

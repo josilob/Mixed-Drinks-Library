@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Drinks.css';
@@ -12,7 +12,13 @@ import rum from '../../images/rum-min.png';
 function Drinks() {
 	const urlBase = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
 
-	const [drinksData, setDrinksData] = React.useState([]);
+	const [drinksData, setDrinksData] = useState([]);
+
+	const listRef = useRef(null);
+	const scrollToDrinks = () => {
+		if (listRef.current !== null)
+			listRef.current.scrollIntoView({ block: 'start', behavior: 'smooth' });
+	};
 
 	async function filterDrink(spirit) {
 		try {
@@ -23,6 +29,34 @@ function Drinks() {
 		}
 	}
 
+	const spirits = [
+		{ image: tequila, base: 'tequila' },
+		{ image: rum, base: 'rum' },
+		{ image: vodka, base: 'vodka' },
+		{ image: gin, base: 'gin' },
+		{ image: scotch, base: 'scotch' },
+		{ image: bourbon, base: 'bourbon' }
+	];
+
+	const mappedBottles = spirits.map((btl, idx) => {
+		return (
+			<div className='bottle-div' key={idx}>
+				<h3 className='drink-type' id={btl.base}>
+					{btl.base.toUpperCase()}
+				</h3>
+				<img
+					onClick={() => {
+						filterDrink(btl.base);
+						setTimeout(scrollToDrinks, 350);
+					}}
+					className='Bottle'
+					src={btl.image}
+					alt='bottle'
+				/>
+			</div>
+		);
+	});
+
 	return (
 		<div className='Drinks'>
 			<div className='drinks-intro'>
@@ -31,111 +65,9 @@ function Drinks() {
 					idea. Cheers!
 				</h2>
 			</div>
-			<div className='bottles'>
-				<div className='bottle-div'>
-					<h3 className='drink-type' id='tequila'>
-						TEQUILA
-					</h3>
-					<img
-						onClick={() => {
-							filterDrink('tequila');
-							setTimeout(function () {
-								window.scrollTo(0, document.body.scrollHeight);
-							}, 250);
-						}}
-						className='Bottle'
-						src={tequila}
-						alt='bottle'
-					/>
-				</div>
+			<div className='bottles'>{mappedBottles}</div>
 
-				<div className='bottle-div'>
-					<h3 className='drink-type' id='rum'>
-						RUM
-					</h3>
-					<img
-						onClick={() => {
-							filterDrink('rum');
-							setTimeout(function () {
-								window.scrollTo(0, 850);
-							}, 250);
-						}}
-						className='Bottle'
-						src={rum}
-						alt='bottle'
-					/>
-				</div>
-
-				<div className='bottle-div'>
-					<h3 className='drink-type' id='vodka'>
-						VODKA
-					</h3>
-					<img
-						onClick={() => {
-							filterDrink('vodka');
-							setTimeout(function () {
-								window.scrollTo(0, 850);
-							}, 250);
-						}}
-						className='Bottle'
-						src={vodka}
-						alt='bottle'
-					/>
-				</div>
-
-				<div className='bottle-div'>
-					<h3 className='drink-type' id='gin'>
-						GIN
-					</h3>
-					<img
-						onClick={() => {
-							filterDrink('gin');
-							setTimeout(function () {
-								window.scrollTo(0, 850);
-							}, 250);
-						}}
-						className='Bottle'
-						src={gin}
-						alt='bottle'
-					/>
-				</div>
-
-				<div className='bottle-div'>
-					<h3 className='drink-type' id='scotch'>
-						SCOTCH
-					</h3>
-					<img
-						onClick={() => {
-							filterDrink('scotch');
-							setTimeout(function () {
-								window.scrollTo(0, 850);
-							}, 250);
-						}}
-						className='Bottle'
-						src={scotch}
-						alt=''
-					/>
-				</div>
-
-				<div className='bottle-div'>
-					<h3 className='drink-type' id='bourbon'>
-						BOURBON
-					</h3>
-					<img
-						onClick={() => {
-							filterDrink('bourbon');
-							setTimeout(function () {
-								window.scrollTo(0, 850);
-							}, 250);
-						}}
-						className='Bottle'
-						src={bourbon}
-						alt='bottle'
-					/>
-				</div>
-			</div>
-
-			<div className='drink-list'>
+			<div className='drink-list' ref={listRef}>
 				{drinksData.map((element) => (
 					<Link
 						key={element.idDrink}
