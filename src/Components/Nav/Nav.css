@@ -1,3 +1,6 @@
+* {
+	/* outline: 1px solid red; */
+}
 .navbar {
 	background: rgb(7, 7, 7);
 	height: 100%;
@@ -6,7 +9,7 @@
 	column-gap: 20px;
 	width: 600px;
 	align-items: center;
-	font-size: 22px;
+	font-size: 1.4rem;
 	max-width: 350px;
 }
 

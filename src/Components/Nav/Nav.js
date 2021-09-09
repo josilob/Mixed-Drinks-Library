@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css';
 
 function Nav() {
-	const [click, setClick] = React.useState(false);
+	const [click, setClick] = useState(false);
 
 	const handleClick = () => setClick(!click);
 	const closeBurger = () => setClick(false);

@@ -1,8 +1,12 @@
+* {
+	/* outline: 1px solid red; */
+}
+
 .Drinks {
 	display: grid;
-	background-image: url('https://i.imgur.com/KDqIg97.jpg');
+	background-image: url('../../images/drinks-about.jpeg');
 	background-position: center;
-	min-height: calc(100vh-92px);
+	min-height: calc(100vh - 92px);
 	min-width: 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -27,7 +31,7 @@
 	margin-top: 50px;
 	position: relative;
 	margin: 0 auto;
-	height: 600px;
+	height: 500px;
 }
 
 .bottle-div {
