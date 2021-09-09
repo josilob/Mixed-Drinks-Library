@@ -22,9 +22,7 @@ function Nav() {
 					<Link to='/'>Home</Link>
 				</li>
 				<li className='nav-item' onClick={closeBurger}>
-					<Link className='mylink' to='/drinks'>
-						Cocktails
-					</Link>
+					<Link to='/drinks'>Cocktails</Link>
 				</li>
 				<li className='nav-item' onClick={closeBurger}>
 					<Link to='/about'>About</Link>

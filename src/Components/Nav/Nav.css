@@ -1,5 +1,5 @@
 * {
-	outline: 1px solid red;
+	/* outline: 1px solid red; */
 }
 .navbar {
 	background: rgb(7, 7, 7);
@@ -21,7 +21,7 @@
 .cheers {
 	filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(128deg)
 		brightness(105%) contrast(105%);
-	height: 60px;
+	height: 3rem;
 	width: auto;
 	padding-left: 10px;
 }
@@ -32,7 +32,7 @@
 	top: 50%;
 	transform: translateX(50%) translateY(-50%);
 	color: white;
-	font-size: clamp(18px, 20px + 1.5vw, 42px);
+	font-size: clamp(1rem, 1rem + 1.75vmin, 3rem);
 	font-family: 'Fredericka the Great';
 }
 
@@ -45,7 +45,7 @@
 	justify-content: space-around;
 }
 
-.nav-item > a {
+.nav-item a {
 	color: #fff;
 	font-family: 'Fredericka the Great';
 	text-decoration: none;
@@ -67,10 +67,6 @@
 	border-radius: 4px;
 	transition: all 0.5s linear;
 }
-
-/* .Header > i {
-	width: 0;
-} */
 
 .navbar i {
 	display: none;
@@ -104,20 +100,17 @@
 	.nav-item {
 		height: 5rem;
 		margin: 20px auto;
-		padding: 16px;
 		width: 100vw;
 		font-size: 2rem;
-	}
-
-	.mylink {
+		display: flex;
 	}
 
 	.nav-item a {
-		margin: 0 auto;
 		height: 100%;
-		width: 100%;
-		text-align: center;
+		width: 90vw;
 		background: transparent;
+		margin: 0 auto;
+		justify-content: center;
 	}
 
 	.navbar i {

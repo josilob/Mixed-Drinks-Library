@@ -24,6 +24,7 @@
 	left: 0;
 	width: 30vw;
 	min-width: 15rem;
+	max-width: 40rem;
 	pointer-events: none;
 }
 

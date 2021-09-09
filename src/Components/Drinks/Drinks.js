@@ -57,6 +57,17 @@ function Drinks() {
 		);
 	});
 
+	const mappedDrinks = drinksData.map((element) => (
+		<Link
+			key={element.idDrink}
+			to={{
+				pathname: '/cocktail/' + element.strDrink,
+				state: { idDrink: element.idDrink }
+			}}>
+			<div className='cocktail-list-name'>{element.strDrink}</div>
+		</Link>
+	));
+
 	return (
 		<div className='Drinks'>
 			<div className='drinks-intro'>
@@ -66,18 +77,8 @@ function Drinks() {
 				</h2>
 			</div>
 			<div className='bottles'>{mappedBottles}</div>
-
 			<div className='drink-list' ref={listRef}>
-				{drinksData.map((element) => (
-					<Link
-						key={element.idDrink}
-						to={{
-							pathname: '/cocktail/' + element.strDrink,
-							state: { idDrink: element.idDrink }
-						}}>
-						<div className='cocktail-list-name'>{element.strDrink}</div>
-					</Link>
-				))}
+				{mappedDrinks}
 			</div>
 		</div>
 	);
