@@ -5,7 +5,7 @@ import martini from '../../images/lime.png';
 function Home() {
 	return (
 		<div className='Home'>
-			<img src={martini} alt='image' />
+			<img src={martini} />
 			<p className='home-intro'>
 				Thirsty?
 				<br />
