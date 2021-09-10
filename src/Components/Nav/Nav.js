@@ -25,7 +25,7 @@ function Nav() {
 					<Link to='/drinks'>Cocktails</Link>
 				</li>
 				<li className='nav-item' onClick={closeBurger}>
-					<Link to='/about'>About</Link>
+					<Link to='/about'>Sign In/Up</Link>
 				</li>
 			</ul>
 

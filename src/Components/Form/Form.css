@@ -1,0 +1,23 @@
+.Form {
+	min-height: calc(100vh - 92px);
+	min-width: 100vw;
+	padding-top: 40px;
+	background: url('../../images/about-bg.jpg');
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+label {
+	color: red;
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 425px) {
+}
+
+@media screen and (min-width: 1700px) {
+}

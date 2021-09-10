@@ -1,5 +1,4 @@
 .Home {
-	display: grid;
 	background: #000;
 	min-height: calc(100vh - 92px);
 	min-width: 100%;

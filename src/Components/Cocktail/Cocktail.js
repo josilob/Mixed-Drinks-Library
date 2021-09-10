@@ -16,7 +16,7 @@ function Cocktail(props) {
 			const { data } = await axios(`${urlBase}${idDrink}`);
 			setDetails(data.drinks[0]);
 		} catch (err) {
-			console.log(err);
+			console.log(err.message);
 		} finally {
 			setShowLoader(false);
 		}
@@ -27,20 +27,19 @@ function Cocktail(props) {
 	}, [props.location.state.idDrink]);
 
 	useEffect(() => {
+		const listIngr = () => {
+			let ingr = [];
+			for (let i = 1; i < 16; i++) {
+				if (details[`strIngredient${i}`] == null) break;
+				ingr.push({
+					ingredientName: details[`strIngredient${i}`],
+					ingredientMeasure: details[`strMeasure${i}`] || ''
+				});
+			}
+			setIngredients(ingr);
+		};
 		listIngr();
 	}, [details]);
-
-	const listIngr = () => {
-		let ingr = [];
-		for (let i = 1; i < 16; i++) {
-			if (details[`strIngredient${i}`] == null) break;
-			ingr.push({
-				ingredientName: details[`strIngredient${i}`],
-				ingredientMeasure: details[`strMeasure${i}`] || ''
-			});
-		}
-		setIngredients(ingr);
-	};
 
 	return (
 		<div className='Cocktail'>
