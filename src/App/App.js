@@ -15,7 +15,7 @@ function App() {
 			<Switch>
 				<Route exact path='/' component={Home} />
 				<Route path='/drinks' component={Drinks} />
-				<Route path='/about' component={Form} />
+				<Route path='/form' component={Form} />
 				<Route
 					path='/cocktail/:cocktail'
 					render={(routerProps) => <Cocktail {...routerProps} />}

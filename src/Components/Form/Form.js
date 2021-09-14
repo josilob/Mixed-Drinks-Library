@@ -12,7 +12,7 @@ import { useHistory } from 'react-router-dom';
 import LockOutlineIcon from '@material-ui/icons/LockOutlined';
 import useStyles from './styles';
 import Input from './Input';
-import Icon from './icon';
+import { signin, signup } from '../../actions/auth';
 import './Form.css';
 
 function Form() {
@@ -27,18 +27,18 @@ function Form() {
 	const [isSignup, setIsSignup] = useState();
 	const [formData, setFormData] = useState(initialState);
 	const history = useHistory();
-	// const isSignup = true;
+
 	const handleShowPassword = () => {
 		setShowPassword((prevShowPassword) => !prevShowPassword);
 	};
 	const handleSubmit = (event) => {
 		event.preventDefault();
 
-		// if (isSignup) {
-		// 	signup(formData, history);
-		// } else {
-		// 	signin(formData, history);
-		// }
+		if (isSignup) {
+			signup(formData, history);
+		} else {
+			signin(formData, history);
+		}
 	};
 
 	const handleChange = (e) => {
@@ -62,19 +62,15 @@ function Form() {
 						{isSignup && (
 							<>
 								<Input
-									name='username'
-									label='Username'
+									name='email'
+									label='Email'
+									type='email'
 									handleChange={handleChange}
 									autoFocus
 								/>
 							</>
 						)}
-						<Input
-							name='email'
-							label='Email Adress'
-							handleChange={handleChange}
-							type='email'
-						/>
+						<Input name='username' label='Username' handleChange={handleChange} />
 						<Input
 							name='password'
 							label='Password'
