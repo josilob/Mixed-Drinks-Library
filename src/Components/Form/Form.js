@@ -17,8 +17,8 @@ import './Form.css';
 
 function Form() {
 	const initialState = {
-		username: '',
 		email: '',
+		username: '',
 		password: '',
 		confirmPassword: ''
 	};
@@ -57,18 +57,16 @@ function Form() {
 					<LockOutlineIcon />
 				</Avatar>
 				<Typography variant='h5'>{isSignup ? 'Sign Up' : 'Sign In'}</Typography>
+
 				<form className={classes.form} onSubmit={handleSubmit}>
 					<Grid container spacing={2}>
 						{isSignup && (
-							<>
-								<Input
-									name='email'
-									label='Email'
-									type='email'
-									handleChange={handleChange}
-									autoFocus
-								/>
-							</>
+							<Input
+								name='email'
+								label='Email'
+								handleChange={handleChange}
+								autoFocus
+							/>
 						)}
 						<Input name='username' label='Username' handleChange={handleChange} />
 						<Input
