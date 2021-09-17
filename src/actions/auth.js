@@ -6,7 +6,7 @@ export const signin = async (formData, history) => {
 		localStorage.setItem('profile', JSON.stringify({ data }));
 
 		history.push('/');
-		return { data };
+		return data;
 	} catch (err) {
 		console.log(err.message);
 	}
@@ -14,8 +14,10 @@ export const signin = async (formData, history) => {
 
 export const signup = async (formData, history) => {
 	try {
-		const { data } = await api.signUp(formData);
+		const { data } = await await api.signUp(formData);
+		localStorage.setItem('profile', JSON.stringify({ data }));
 		history.push('/');
+
 		return data;
 	} catch (err) {
 		console.log(err.message);
