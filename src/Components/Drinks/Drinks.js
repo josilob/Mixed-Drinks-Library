@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Drinks.css';
@@ -10,11 +10,46 @@ import tequila from '../../images/tequila-min.png';
 import rum from '../../images/rum-min.png';
 
 function Drinks() {
-	const urlBase = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
-
 	const [drinksData, setDrinksData] = useState([]);
-
+	const [isSearching, setIsSearching] = useState(false);
+	const [searchTerm, setSearchTerm] = useState('');
+	const intervalRef = useRef(null);
 	const listRef = useRef(null);
+
+	const urlBase = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
+	const spirits = [
+		{ image: tequila, base: 'tequila' },
+		{ image: rum, base: 'rum' },
+		{ image: vodka, base: 'vodka' },
+		{ image: gin, base: 'gin' },
+		{ image: scotch, base: 'scotch' },
+		{ image: bourbon, base: 'bourbon' }
+	];
+
+	async function searchDrink(drinkName) {
+		const { data } = await axios.get(
+			`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkName}`
+		);
+		return data;
+	}
+
+	useEffect(() => {
+		if (searchTerm) {
+			setIsSearching(true);
+			console.log(intervalRef.current);
+			intervalRef.current = setTimeout(() => {
+				searchDrink(searchTerm).then((res) => {
+					setIsSearching(false);
+					setDrinksData(res.drinks);
+				});
+			}, 500);
+		} else {
+			setDrinksData([]);
+			clearTimeout(intervalRef.current);
+		}
+		return () => clearTimeout(intervalRef.current);
+	}, [searchTerm]);
+
 	const scrollToDrinks = () => {
 		if (listRef.current !== null)
 			listRef.current.scrollIntoView({ block: 'start', behavior: 'smooth' });
@@ -28,15 +63,6 @@ function Drinks() {
 			console.log(err);
 		}
 	}
-
-	const spirits = [
-		{ image: tequila, base: 'tequila' },
-		{ image: rum, base: 'rum' },
-		{ image: vodka, base: 'vodka' },
-		{ image: gin, base: 'gin' },
-		{ image: scotch, base: 'scotch' },
-		{ image: bourbon, base: 'bourbon' }
-	];
 
 	const mappedBottles = spirits.map((btl, idx) => {
 		return (
@@ -57,7 +83,7 @@ function Drinks() {
 		);
 	});
 
-	const mappedDrinks = drinksData.map((element) => (
+	const mappedDrinks = drinksData?.map((element) => (
 		<Link
 			key={element.idDrink}
 			to={{
@@ -75,6 +101,12 @@ function Drinks() {
 					Choose your favorite spirit below and our bartender will come up with an
 					idea. Cheers!
 				</h2>
+				{/*  */}
+				<input
+					placeholder='Drink by Name'
+					onChange={(e) => setSearchTerm(e.target.value)}
+				/>
+				{/*  */}
 			</div>
 			<div className='bottles'>{mappedBottles}</div>
 			<div className='drink-list' ref={listRef}>

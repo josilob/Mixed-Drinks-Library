@@ -14,7 +14,7 @@ import Input from './Input';
 import { signin, signup } from '../../actions/auth';
 import './Form.css';
 
-function Form() {
+function Form({ isSignup, setIsSignup }) {
 	const initialState = {
 		email: '',
 		username: '',
@@ -23,7 +23,6 @@ function Form() {
 	};
 	const classes = useStyles();
 	const [showPassword, setShowPassword] = useState(false);
-	const [isSignup, setIsSignup] = useState();
 	const [formData, setFormData] = useState(initialState);
 	const history = useHistory();
 

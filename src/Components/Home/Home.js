@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 import martini from '../../images/lime.png';
 
-function Home() {
+function Home({ setIsSignup }) {
 	return (
-		<div className='Home'>
-			<img src={martini} alt='' />
+		<div className='home'>
+			<img src={martini} alt='martini-img' />
 			<p className='home-intro'>
 				Thirsty?
 				<br />
@@ -14,6 +15,13 @@ function Home() {
 				would like a classic cocktail, a party punch or an original concoction, just
 				a shake, stir or pour away.
 			</p>
+
+			<div className='home-links'>
+				<Link to='/drinks'>Search</Link>
+				<Link to='/form' onClick={() => setIsSignup(true)}>
+					Register
+				</Link>
+			</div>
 		</div>
 	);
 }
