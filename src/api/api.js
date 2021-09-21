@@ -3,9 +3,9 @@ import axios from 'axios';
 const API = axios.create({ baseURL: 'https://mdl-server.herokuapp.com/' });
 
 API.interceptors.request.use((req) => {
-	if (localStorage.getItem('profile')) {
+	if (sessionStorage.getItem('profile')) {
 		req.headers.Authorization = `Bearer ${JSON.parse(
-			localStorage.getItem('profile')
+			sessionStorage.getItem('profile')
 		)}`;
 	}
 	return req;

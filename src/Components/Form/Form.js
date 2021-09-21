@@ -8,7 +8,6 @@ import {
 	Container
 } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
-// import { useDispatch } from 'react-redux';
 import LockOutlineIcon from '@material-ui/icons/LockOutlined';
 import useStyles from './styles';
 import Input from './Input';

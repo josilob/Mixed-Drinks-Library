@@ -41,10 +41,12 @@
 
 @media screen and (max-width: 475px) {
 	.home-intro {
-		padding-top: 0px;
-		margin-top: 10px;
+		padding-top: 10px;
 		width: 90%;
 	}
 }
 @media screen and (min-width: 1400px) {
+	.home-intro {
+		max-width: 1000px;
+	}
 }

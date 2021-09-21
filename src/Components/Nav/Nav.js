@@ -5,7 +5,9 @@ import './Nav.css';
 
 function Nav() {
 	const [click, setClick] = useState(false);
-	const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+	const [user, setUser] = useState(
+		JSON.parse(sessionStorage.getItem('profile'))
+	);
 
 	const location = useLocation();
 	const history = useHistory();
@@ -14,15 +16,15 @@ function Nav() {
 	const closeBurger = () => setClick(false);
 
 	const logout = () => {
-		localStorage.removeItem('profile');
+		sessionStorage.removeItem('profile');
 		setUser(null);
 		history.push('/');
 	};
 	// console.log(user);
 
 	useEffect(() => {
-		const token = user?.token;
-		const parsedUser = JSON.parse(localStorage?.getItem('profile'))?.data;
+		// const token = user?.token;
+		const parsedUser = JSON.parse(sessionStorage?.getItem('profile'))?.data;
 		// check for JWT
 		setUser(parsedUser);
 	}, [location]);
