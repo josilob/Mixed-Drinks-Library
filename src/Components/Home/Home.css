@@ -37,11 +37,16 @@
 	position: relative;
 	max-width: 600px;
 	margin: 0 auto;
-	transform: translateY(10rem);
+	transform: translateY(3rem);
 	z-index: 2;
+	border: 1px solid rgba(230, 230, 230, 0.9);
+	padding: 5rem;
+	border-radius: 1rem;
+	background-color: rgba(255, 255, 255, 0.25);
 }
 .home-links a {
 	border: 1.5px solid #fff;
+	background-color: rgba(255, 255, 255, 0.45);
 	font-size: clamp(1rem, 1rem + 1.2vmin, 2rem);
 	border-radius: 0.5rem;
 	padding: 0.5rem 1rem;

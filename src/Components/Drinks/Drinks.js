@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { TextField } from '@material-ui/core';
 import axios from 'axios';
 import './Drinks.css';
 import gin from '../../images/gin-min.png';
@@ -16,7 +17,8 @@ function Drinks() {
 	const intervalRef = useRef(null);
 	const listRef = useRef(null);
 
-	const urlBase = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
+	const spiritUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
+	const drinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 	const spirits = [
 		{ image: tequila, base: 'tequila' },
 		{ image: rum, base: 'rum' },
@@ -27,9 +29,7 @@ function Drinks() {
 	];
 
 	async function searchDrink(drinkName) {
-		const { data } = await axios.get(
-			`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkName}`
-		);
+		const { data } = await axios.get(`${drinkUrl}${drinkName}`);
 		return data;
 	}
 
@@ -57,7 +57,7 @@ function Drinks() {
 
 	async function filterDrink(spirit) {
 		try {
-			const { data } = await axios(`${urlBase}${spirit}`);
+			const { data } = await axios(`${spiritUrl}${spirit}`);
 			setDrinksData(data.drinks);
 		} catch (err) {
 			console.log(err);
@@ -102,9 +102,12 @@ function Drinks() {
 					idea. Cheers!
 				</h2>
 				{/*  */}
-				<input
-					placeholder='Drink by Name'
+				<TextField
 					onChange={(e) => setSearchTerm(e.target.value)}
+					variant='outlined'
+					fullWidth
+					label='Search Drink by Name'
+					type='text'
 				/>
 				{/*  */}
 			</div>
