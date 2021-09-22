@@ -1,4 +1,4 @@
-import loader from './bwloader.gif';
+import loader from '../../images/bwloader.gif';
 
 const Loader = () => {
 	return (

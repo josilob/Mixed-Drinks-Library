@@ -9,6 +9,7 @@ import scotch from '../../images/scotch-min.png';
 import bourbon from '../../images/bourbon-min.png';
 import tequila from '../../images/tequila-min.png';
 import rum from '../../images/rum-min.png';
+import loader from '../../images/bwloader.gif';
 
 function Drinks() {
 	const [drinksData, setDrinksData] = useState([]);
@@ -36,7 +37,7 @@ function Drinks() {
 	useEffect(() => {
 		if (searchTerm) {
 			setIsSearching(true);
-			console.log(intervalRef.current);
+			// console.log(intervalRef.current);
 			intervalRef.current = setTimeout(() => {
 				searchDrink(searchTerm).then((res) => {
 					setIsSearching(false);
@@ -98,19 +99,24 @@ function Drinks() {
 		<div className='Drinks'>
 			<div className='drinks-intro'>
 				<h2>
-					Choose your favorite spirit below and our bartender will come up with an
-					idea. Cheers!
+					Choose your favorite spirit below or simply type in the name of the drink
+					and our bartender will come up with an answer. Cheers!
 				</h2>
-				{/*  */}
-				<TextField
-					onChange={(e) => setSearchTerm(e.target.value)}
-					variant='outlined'
-					fullWidth
-					label='Search Drink by Name'
-					type='text'
-				/>
-				{/*  */}
+				<div id='searchBar'>
+					<TextField
+						onChange={(e) => setSearchTerm(e.target.value)}
+						variant='outlined'
+						fullWidth
+						label='Search Drink by Name'
+						type='text'
+						id='drink-input'
+					/>
+					{isSearching && (
+						<img src={loader} alt='loader' className='searchbar-loader' />
+					)}
+				</div>
 			</div>
+
 			<div className='bottles'>{mappedBottles}</div>
 			<div className='drink-list' ref={listRef}>
 				{mappedDrinks}
