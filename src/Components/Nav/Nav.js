@@ -18,13 +18,15 @@ function Nav() {
 	const logout = () => {
 		sessionStorage.removeItem('profile');
 		setUser(null);
+		setClick(false);
 		history.push('/');
 	};
 	// console.log(user);
+	// console.log(user.username);
 
 	useEffect(() => {
 		// const token = user?.token;
-		const parsedUser = JSON.parse(sessionStorage?.getItem('profile'))?.data;
+		const parsedUser = JSON.parse(sessionStorage?.getItem('profile'));
 		// check for JWT
 		setUser(parsedUser);
 	}, [location]);

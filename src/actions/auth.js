@@ -3,7 +3,7 @@ import * as api from '../api/api';
 export const signin = async (formData, history) => {
 	try {
 		const { data } = await api.signIn(formData);
-		sessionStorage.setItem('profile', JSON.stringify({ data }));
+		sessionStorage.setItem('profile', JSON.stringify({ data }.data));
 
 		history.push('/');
 		return data;
@@ -15,7 +15,7 @@ export const signin = async (formData, history) => {
 export const signup = async (formData, history) => {
 	try {
 		const { data } = await await api.signUp(formData);
-		sessionStorage.setItem('profile', JSON.stringify({ data }));
+		sessionStorage.setItem('profile', JSON.stringify({ data }.data));
 		history.push('/');
 
 		return data;
