@@ -72,7 +72,10 @@ function Drinks() {
 
 	async function fetchCollection(id) {
 		try {
-			const { data } = await axios(`http://localhost:27017/drinks/get/${id}`);
+			// const { data } = await axios(`http://localhost:27017/drinks/get/${id}`);
+			const { data } = await axios(
+				`https://mdl-server.herokuapp.com/drinks/get/${id}`
+			);
 			// console.log(data);
 			setDrinksData(data);
 		} catch (err) {
