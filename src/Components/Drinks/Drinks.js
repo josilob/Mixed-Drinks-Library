@@ -18,6 +18,9 @@ function Drinks() {
 	const intervalRef = useRef(null);
 	const listRef = useRef(null);
 
+	const user = JSON.parse(sessionStorage.getItem('profile'))?.username || '';
+	const userID = JSON.parse(sessionStorage.getItem('profile'))?.userID;
+
 	const spiritUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
 	const drinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 	const spirits = [
@@ -28,6 +31,8 @@ function Drinks() {
 		{ image: scotch, base: 'scotch' },
 		{ image: bourbon, base: 'bourbon' }
 	];
+
+	// console.log(listRef?.current?.offsetTop);
 
 	async function searchDrink(drinkName) {
 		const { data } = await axios.get(`${drinkUrl}${drinkName}`);
@@ -42,6 +47,7 @@ function Drinks() {
 				searchDrink(searchTerm).then((res) => {
 					setIsSearching(false);
 					setDrinksData(res.drinks);
+					scrollToDrinks();
 				});
 			}, 500);
 		} else {
@@ -52,8 +58,7 @@ function Drinks() {
 	}, [searchTerm]);
 
 	const scrollToDrinks = () => {
-		if (listRef.current !== null)
-			listRef.current.scrollIntoView({ block: 'start', behavior: 'smooth' });
+		if (listRef.current) window.scrollTo(0, listRef.current.offsetTop);
 	};
 
 	async function filterDrink(spirit) {
@@ -62,6 +67,16 @@ function Drinks() {
 			setDrinksData(data.drinks);
 		} catch (err) {
 			console.log(err);
+		}
+	}
+
+	async function fetchCollection(id) {
+		try {
+			const { data } = await axios(`http://localhost:27017/drinks/get/${id}`);
+			// console.log(data);
+			setDrinksData(data);
+		} catch (err) {
+			console.log(err.message);
 		}
 	}
 
@@ -88,10 +103,12 @@ function Drinks() {
 		<Link
 			key={element.idDrink}
 			to={{
-				pathname: '/cocktail/' + element.strDrink,
+				pathname: '/cocktail/' + (element.strDrink || element.drinkName),
 				state: { idDrink: element.idDrink }
 			}}>
-			<div className='cocktail-list-name'>{element.strDrink}</div>
+			<div className='cocktail-list-name'>
+				{element.strDrink || element.drinkName}
+			</div>
 		</Link>
 	));
 
@@ -115,6 +132,21 @@ function Drinks() {
 						<img src={loader} alt='loader' className='searchbar-loader' />
 					)}
 				</div>
+				{user && (
+					<div className='collection-container'>
+						<p>or check </p>
+						<br />
+						<br />
+						<button
+							className='btn'
+							onClick={() => {
+								fetchCollection(userID);
+								setTimeout(scrollToDrinks, 350);
+							}}>
+							{user}'s collection
+						</button>
+					</div>
+				)}
 			</div>
 
 			<div className='bottles'>{mappedBottles}</div>

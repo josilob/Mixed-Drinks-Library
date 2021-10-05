@@ -25,6 +25,51 @@
 	position: relative;
 }
 
+.drinks-intro p {
+	font-size: clamp(1rem, 1rem + 1vmin, 1.4rem);
+	margin: 0.5rem auto;
+	position: relative;
+}
+.drinks-intro p::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	border-top: 1px solid #fff;
+	width: 4rem;
+	transform: translate(30%, -50%);
+}
+.drinks-intro p::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+	border-top: 1px solid #fff;
+	width: 4rem;
+	transform: translate(-30%, -50%);
+}
+
+.collection-container {
+	/* outline: 1px solid red; */
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+.drinks-intro button {
+	font-size: clamp(1rem, 1rem + 1vmin, 1.8rem);
+	outline: 1px solid #fff;
+	color: #fff;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	background-color: #242222;
+	margin-top: -1rem;
+	font-family: 'Fredericka the Great';
+}
+.drinks-intro button:hover {
+	cursor: pointer;
+	transform: scale(0.98);
+}
+
 #searchBar {
 	margin: 0 auto;
 	margin-top: 1rem;
@@ -32,6 +77,7 @@
 	justify-items: center;
 	position: relative;
 	max-width: clamp(200px, 200px + 10vmin, 400px);
+	transform: scale(0.95);
 }
 
 #searchBar img {
@@ -54,9 +100,6 @@
 	color: rgba(25, 10, 228, 0.75) !important;
 	transform: translate(1.15rem) scale(0.75) !important;
 	z-index: 2;
-}
-
-#drink-input::after {
 }
 
 .bottles {
