@@ -7,6 +7,8 @@ function Cocktail(props) {
 	const [details, setDetails] = useState([]);
 	const [ingredients, setIngredients] = useState([]);
 	const [showLoader, setShowLoader] = useState(false);
+	const { userID } = props;
+	console.log(userID);
 
 	const urlBase = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
 

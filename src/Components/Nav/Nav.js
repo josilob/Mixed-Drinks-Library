@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation, useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import cheers from '../../images/cheers.png';
 import './Nav.css';
 
-function Nav() {
+function Nav(props) {
+	const { user, setUser } = props;
 	const [click, setClick] = useState(false);
-	const [user, setUser] = useState(
-		JSON.parse(sessionStorage.getItem('profile'))
-	);
-
-	const location = useLocation();
 	const history = useHistory();
 
 	const handleClick = () => setClick(!click);
@@ -21,15 +17,6 @@ function Nav() {
 		setClick(false);
 		history.push('/');
 	};
-	// console.log(user);
-	// console.log(user.username);
-
-	useEffect(() => {
-		// const token = user?.token;
-		const parsedUser = JSON.parse(sessionStorage?.getItem('profile'));
-		// check for JWT
-		setUser(parsedUser);
-	}, [location]);
 
 	const authJSX = user ? (
 		<li className='nav-item' onClick={(closeBurger, logout)}>
