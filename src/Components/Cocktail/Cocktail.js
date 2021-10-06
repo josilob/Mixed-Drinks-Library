@@ -4,10 +4,18 @@ import './Cocktail.css';
 import axios from 'axios';
 
 function Cocktail(props) {
-	const [details, setDetails] = useState([]);
-	const [ingredients, setIngredients] = useState([]);
+	const { userID, location } = props;
+	// const collectionRef = useRef([]);
+	const [collection, setCollection] = useState([]); // user's favorite drinks
+	const [details, setDetails] = useState([]); // displayed drink details
+	const [ingredients, setIngredients] = useState([]); // displayed drink's ingredients
 	const [showLoader, setShowLoader] = useState(false);
-	const collectionRef = useRef([]);
+	const drinkIncluded = collection.some(
+		(el) => el.drinkName === details.strDrink
+	);
+
+	console.log(drinkIncluded);
+	const [included, setIncluded] = useState(drinkIncluded);
 
 	let drinkData = {
 		drink: '',
@@ -15,15 +23,13 @@ function Cocktail(props) {
 		id: '',
 		user: ''
 	};
-	const { userID, location } = props;
 
 	const urlBase = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
 	const backendUrl = 'https://mdl-server.herokuapp.com/';
 	// const backendUrl = 'http://localhost:27017/';
 
-	const drinkIncluded = collectionRef?.current.some(
-		(el) => el.drinkName === details.strDrink
-	);
+	// if (collection.some((el) => el.drinkName === details.strDrink))
+	// 	setDrinkIncluded(true);
 
 	const addDrink = async (newDrink) => {
 		try {
@@ -54,33 +60,37 @@ function Cocktail(props) {
 		</div>
 	));
 
-	useEffect(() => {
-		const getUsersDrinks = async (id) => {
-			try {
-				// const { data } = await axios(`http://localhost:27017/drinks/get/${id}`);
-				const { data } = await axios(
-					`https://mdl-server.herokuapp.com/drinks/get/${id}`
-				);
-				collectionRef.current = data;
-			} catch (err) {
-				console.log(err.message);
-			}
-		};
-		const readDrink = async (idDrink) => {
-			try {
-				setShowLoader(true);
-				const { data } = await axios(`${urlBase}${idDrink}`);
-				setDetails(data.drinks[0]);
-			} catch (err) {
-				console.log(err.message);
-			} finally {
-				setShowLoader(false);
-			}
-		};
+	const getUsersDrinks = async (id) => {
+		try {
+			// const { data } = await axios(`http://localhost:27017/drinks/get/${id}`);
+			const { data } = await axios(
+				`https://mdl-server.herokuapp.com/drinks/get/${id}`
+			);
+			setCollection(data);
+		} catch (err) {
+			console.log(err.message);
+		}
+	};
+	const readDrink = async (idDrink) => {
+		try {
+			setShowLoader(true);
+			const { data } = await axios(`${urlBase}${idDrink}`);
+			setDetails(data.drinks[0]);
+		} catch (err) {
+			console.log(err.message);
+		} finally {
+			setShowLoader(false);
+		}
+	};
 
-		if (userID) getUsersDrinks(userID);
+	useEffect(() => {
+		if (userID) {
+			getUsersDrinks(userID);
+			setIncluded(drinkIncluded);
+		}
+
 		readDrink(location?.state?.idDrink);
-	}, [location?.state?.idDrink]);
+	}, [location?.state?.idDrink, drinkIncluded]);
 
 	useEffect(() => {
 		const listIngr = () => {
@@ -94,10 +104,11 @@ function Cocktail(props) {
 			}
 			setIngredients(ingr);
 		};
+
 		listIngr();
 	}, [details]);
 
-	const drinkID = collectionRef?.current?.find(
+	const drinkID = collection.find(
 		(el) => el?.drinkName === details?.strDrink
 	)?._id;
 
@@ -114,15 +125,7 @@ function Cocktail(props) {
 					<h3 className='ingr-list'>List of ingredients:</h3>
 					{mappedIngredients}
 				</div>
-				{drinkIncluded ? (
-					<button
-						onClick={() => {
-							removeDrink(drinkID);
-						}}
-						className='handle-post__btn'>
-						Remove
-					</button>
-				) : (
+				{!included ? (
 					<button
 						onClick={() => {
 							drinkData = {
@@ -132,9 +135,20 @@ function Cocktail(props) {
 								user: userID
 							};
 							addDrink({ drinkData });
+							setIncluded(!included);
 						}}
 						className='handle-post__btn'>
 						Favorite
+					</button>
+				) : (
+					<button
+						onClick={() => {
+							removeDrink(drinkID);
+							getUsersDrinks(userID);
+							setIncluded(!included);
+						}}
+						className='handle-post__btn'>
+						Remove
 					</button>
 				)}
 			</div>
