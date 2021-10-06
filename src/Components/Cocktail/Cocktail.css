@@ -20,6 +20,22 @@
 	padding: 20px;
 }
 
+.handle-post__btn {
+	font-family: 'Fredericka the Great';
+	background-color: #242222;
+	color: #fff;
+	border: none;
+	font-size: clamp(1rem, 1rem + 1vmin, 2rem);
+	outline: 1px solid #fff;
+	padding: 0.2rem 0.5rem;
+	border-radius: 0.2rem;
+	margin-top: 0.75rem;
+}
+.handle-post__btn:hover {
+	transform: scale(0.98);
+	cursor: pointer;
+}
+
 .drink-img {
 	height: 25vh;
 	margin: 0 auto;

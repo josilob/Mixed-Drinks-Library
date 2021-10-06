@@ -7,9 +7,7 @@ function Cocktail(props) {
 	const [details, setDetails] = useState([]);
 	const [ingredients, setIngredients] = useState([]);
 	const [showLoader, setShowLoader] = useState(false);
-
-	// const drinksRef = useRef([]);
-	const [collection, setCollection] = useState([]);
+	const collectionRef = useRef([]);
 
 	let drinkData = {
 		drink: '',
@@ -23,13 +21,13 @@ function Cocktail(props) {
 	const backendUrl = 'https://mdl-server.herokuapp.com/';
 	// const backendUrl = 'http://localhost:27017/';
 
-	const displayBtn = () => {};
-	// 	return collection.includes({ id: drinkData.id }) ? true : false;
-	// };
+	const drinkIncluded = collectionRef?.current.some(
+		(el) => el.drinkName === details.strDrink
+	);
 
 	const addDrink = async (newDrink) => {
 		try {
-			await fetch(backendUrl + 'drinks/add', {
+			await fetch(`${backendUrl}drinks/add`, {
 				method: 'post',
 				headers: {
 					'Content-Type': 'application/json'
@@ -57,16 +55,13 @@ function Cocktail(props) {
 	));
 
 	useEffect(() => {
-		const getUsersDrinks = async function fetchCollection(id) {
+		const getUsersDrinks = async (id) => {
 			try {
 				// const { data } = await axios(`http://localhost:27017/drinks/get/${id}`);
 				const { data } = await axios(
 					`https://mdl-server.herokuapp.com/drinks/get/${id}`
 				);
-
-				// console.log(data);
-
-				setCollection(data);
+				collectionRef.current = data;
 			} catch (err) {
 				console.log(err.message);
 			}
@@ -84,8 +79,8 @@ function Cocktail(props) {
 		};
 
 		if (userID) getUsersDrinks(userID);
-		readDrink(location.state.idDrink);
-	}, [location.state.idDrink]);
+		readDrink(location?.state?.idDrink);
+	}, [location?.state?.idDrink]);
 
 	useEffect(() => {
 		const listIngr = () => {
@@ -102,9 +97,7 @@ function Cocktail(props) {
 		listIngr();
 	}, [details]);
 
-	// console.log(collection[0].drinkName, details.strDrink);
-
-	const drinkID = collection.find(
+	const drinkID = collectionRef?.current?.find(
 		(el) => el?.drinkName === details?.strDrink
 	)?._id;
 
@@ -121,7 +114,15 @@ function Cocktail(props) {
 					<h3 className='ingr-list'>List of ingredients:</h3>
 					{mappedIngredients}
 				</div>
-				{displayBtn() ? (
+				{drinkIncluded ? (
+					<button
+						onClick={() => {
+							removeDrink(drinkID);
+						}}
+						className='handle-post__btn'>
+						Remove
+					</button>
+				) : (
 					<button
 						onClick={() => {
 							drinkData = {
@@ -131,15 +132,9 @@ function Cocktail(props) {
 								user: userID
 							};
 							addDrink({ drinkData });
-						}}>
+						}}
+						className='handle-post__btn'>
 						Favorite
-					</button>
-				) : (
-					<button
-						onClick={() => {
-							removeDrink(drinkID);
-						}}>
-						Remove
 					</button>
 				)}
 			</div>
