@@ -10,9 +10,10 @@ import Form from '../Components/Form/Form';
 
 function App() {
 	const [isSignup, setIsSignup] = useState(false);
-	const userID = JSON.parse(sessionStorage.getItem('profile'))?.userID;
 	const [user, setUser] = useState(null);
+	const [drinksData, setDrinksData] = useState([]);
 	const location = useLocation();
+	const userID = JSON.parse(sessionStorage.getItem('profile'))?.userID;
 
 	useEffect(() => {
 		const parsedUser = JSON.parse(sessionStorage.getItem('profile'))?.username;
@@ -27,7 +28,14 @@ function App() {
 				<Route exact path='/' render={() => <Home setIsSignup={setIsSignup} />} />
 				<Route
 					path='/drinks'
-					render={() => <Drinks user={user} userID={userID} />}
+					render={() => (
+						<Drinks
+							user={user}
+							userID={userID}
+							drinksData={drinksData}
+							setDrinksData={setDrinksData}
+						/>
+					)}
 				/>
 				<Route
 					path='/form'

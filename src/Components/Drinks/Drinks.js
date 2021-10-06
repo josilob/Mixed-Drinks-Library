@@ -12,13 +12,12 @@ import rum from '../../images/rum-min.png';
 import loader from '../../images/bwloader.gif';
 
 function Drinks(props) {
-	const [drinksData, setDrinksData] = useState([]);
 	const [isSearching, setIsSearching] = useState(false);
 	const [searchTerm, setSearchTerm] = useState('');
 	const intervalRef = useRef(null);
 	const listRef = useRef(null);
 
-	const { user, userID } = props;
+	const { user, userID, drinksData, setDrinksData } = props;
 
 	const spiritUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
 	const drinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
