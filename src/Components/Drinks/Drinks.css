@@ -139,6 +139,12 @@
 	filter: drop-shadow(15px 15px 14px #242222);
 }
 
+.bottle-div {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
 .bottle-div:nth-child(1) {
 	transform: translateX(290px) translateY(65px) rotate(-24deg);
 }
@@ -150,9 +156,11 @@
 .bottle-div:nth-child(3) {
 	transform: translateX(60px) translateY(30px) rotate(-5deg);
 }
+
 .bottle-div:nth-child(4) {
 	transform: translateX(-60px) translateY(30px) rotate(5deg);
 }
+
 .bottle-div:nth-child(5) {
 	transform: translateX(-210px) translateY(40px) rotate(17.5deg);
 }
@@ -210,7 +218,7 @@
 		height: 450px;
 		max-width: 1200px;
 		margin: 0 auto;
-		margin-top: 5rem;
+		margin-top: 12rem;
 		position: relative;
 	}
 	.Bottle {
@@ -247,50 +255,114 @@
 @media screen and (max-width: 520px) {
 	.Drinks {
 		background-image: url('https://www.desktopbackground.org/p/2010/06/13/32467_oppo-r7-wallpaper-jack-daniels-whiskey-mobile-android-wallpapers_1080x1920_h.jpg');
-		background-position: center 30%;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
 		min-height: 100vh;
 	}
 
 	.bottles {
 		height: 450px;
 		width: 100vw;
-		margin-top: 150px;
+		margin-top: 180px;
+		padding-top: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
 	}
 	.Bottle {
-		height: 180px;
-		width: auto;
+		display: none;
 	}
 
-	.bottle-div {
+	.bottles .bottle-div {
 		height: 200px;
+		all: unset;
+		height: 16%;
+		width: 80%;
+		position: relative;
+		/* outline: 1px solid red; */
+	}
+
+	.bottle-div:hover {
+		cursor: pointer;
+	}
+
+	.bottle-div:nth-child(1),
+	.bottle-div:nth-child(2),
+	.bottle-div:nth-child(3),
+	.bottle-div:nth-child(4),
+	.bottle-div:nth-child(5),
+	.bottle-div:nth-child(6) {
+		background-repeat: no-repeat;
+		background-size: 105% 105%;
+		background-position: center;
+		transition: background-size 0.5s ease;
+		filter: invert(0.875);
+		border-radius: 1rem;
+		outline: 1px solid #000;
 	}
 
 	.bottle-div:nth-child(1) {
-		transform: translateX(115%) translateY(140px);
+		background-image: url('../../images/tequila-label.png');
 	}
-	.bottle-div:nth-child(3) {
-		transform: translateX(40%) translateY(140px);
-	}
-	.bottle-div:nth-child(6) {
-		transform: translateX(-120%) translateY(140px);
-	}
+
 	.bottle-div:nth-child(2) {
-		transform: translateX(80%) translateY(-30px);
+		background-image: url('../../images/rum-label.png');
 	}
+
+	.bottle-div:nth-child(3) {
+		background-image: url('../../images/vodka-label.png');
+	}
+
 	.bottle-div:nth-child(4) {
-		transform: translateX(0vw) translateY(-30px);
+		background-image: url('../../images/gin-label.png');
 	}
+
 	.bottle-div:nth-child(5) {
-		transform: translateX(-158%) translateY(-140px);
+		background-image: url('../../images/scotch-label.png');
+	}
+
+	.bottle-div:nth-child(6) {
+		background-image: url('../../images/bourbon-label.png');
+	}
+
+	.bottle-div:nth-child(1):hover,
+	.bottle-div:nth-child(2):hover,
+	.bottle-div:nth-child(3):hover,
+	.bottle-div:nth-child(4):hover,
+	.bottle-div:nth-child(5):hover,
+	.bottle-div:nth-child(6):hover {
+		background-size: 125% 120%;
 	}
 
 	.drink-type {
+		/* all: unset;
+		opacity: 1;
 		font-size: 14px;
+		font-family: 'Fredericka the Great';
+		color: #fff;
+		position: absolute;
+		margin: 0;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: transform 1.25s ease-in-out; */
+		display: none;
+	}
+	.bottle-div:hover .drink-type {
+		/* all: unset; */
+		font-family: 'Fredericka the Great';
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 
 	.drinks-intro {
 		padding-top: 15px;
-		max-width: 75%;
+		max-width: 90%;
 		font-size: 13px;
 	}
 

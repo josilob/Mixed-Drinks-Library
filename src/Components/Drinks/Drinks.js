@@ -83,19 +83,17 @@ function Drinks(props) {
 
 	const mappedBottles = spirits.map((btl, idx) => {
 		return (
-			<div className='bottle-div' key={idx}>
+			<div
+				className='bottle-div'
+				key={idx}
+				onClick={() => {
+					filterDrink(btl.base);
+					setTimeout(scrollToDrinks, 350);
+				}}>
 				<h3 className='drink-type' id={btl.base}>
 					{btl.base.toUpperCase()}
 				</h3>
-				<img
-					onClick={() => {
-						filterDrink(btl.base);
-						setTimeout(scrollToDrinks, 350);
-					}}
-					className='Bottle'
-					src={btl.image}
-					alt='bottle'
-				/>
+				<img className='Bottle' src={btl.image} alt={`bottle of ${btl.base}`} />
 			</div>
 		);
 	});

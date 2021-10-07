@@ -74,6 +74,11 @@
 	.instructions {
 		width: 70%;
 	}
+
+	.drink-card {
+		width: 95%;
+		max-width: 400px;
+	}
 }
 @media screen and (max-width: 425px) {
 	.Cocktail {
@@ -84,7 +89,7 @@
 		padding: 20px 0 20px;
 	}
 	.drink-card {
-		width: 250px;
+		width: 95%;
 	}
 	.ingredients {
 		line-height: 1.5;
