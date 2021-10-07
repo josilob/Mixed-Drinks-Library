@@ -24,7 +24,7 @@ function Nav(props) {
 		</li>
 	) : (
 		<li className='nav-item' onClick={closeBurger}>
-			<Link to='/form'>Sign In/Up </Link>
+			<Link to='/form'>Sign In </Link>
 		</li>
 	);
 
