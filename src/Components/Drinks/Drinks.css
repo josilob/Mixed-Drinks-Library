@@ -24,7 +24,7 @@
 
 .drinks-intro p {
 	font-size: clamp(1rem, 1rem + 1vmin, 1.4rem);
-	margin: 0.5rem auto;
+	margin: 0.5rem auto 2rem;
 	position: relative;
 }
 .drinks-intro p::before {
@@ -58,7 +58,7 @@
 	padding: 0.5rem;
 	border-radius: 0.5rem;
 	background-color: #242222;
-	margin-top: -1rem;
+	transform: translateY(-3rem);
 	font-family: 'Fredericka the Great';
 }
 .drinks-intro button:hover {
@@ -214,13 +214,18 @@
 	border: 1px solid #fff;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
 	.drinks-intro {
 		height: 150px;
 		padding-top: 50px;
 		line-height: 1.5;
 		font-size: 16px;
 		max-width: 75%;
+	}
+
+	.drinks-intro button {
+		margin: -1.65rem 0 1.5rem 0;
+		transform: translateY(-3.15rem);
 	}
 
 	.bottles {
@@ -232,7 +237,7 @@
 		position: relative;
 	}
 	.Bottle {
-		height: 230px;
+		height: 260px;
 	}
 
 	.bottle-div:nth-child(1) {
@@ -350,9 +355,9 @@
 	}
 
 	.drinks-intro {
-		padding-top: 15px;
+		padding-top: 1rem;
 		max-width: 90%;
-		font-size: 13px;
+		font-size: 14px;
 	}
 
 	.drink-link {
