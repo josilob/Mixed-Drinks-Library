@@ -76,6 +76,7 @@ function Drinks(props) {
 			);
 			// console.log(data);
 			setDrinksData(data);
+			// console.log(drinksData);
 		} catch (err) {
 			console.log(err.message);
 		}
@@ -98,16 +99,25 @@ function Drinks(props) {
 		);
 	});
 
+	// check for image thumbnail
+	const imageSrc = (el) => {
+		return el.strDrinkThumb ? el.strDrinkThumb : el.drinkImage;
+	};
+
 	const mappedDrinks = drinksData?.map((element) => (
 		<Link
+			className='drink-link'
 			key={element.idDrink}
 			to={{
 				pathname: '/cocktail/' + (element.strDrink || element.drinkName),
 				state: { idDrink: element.idDrink }
 			}}>
-			<div className='cocktail-list-name'>
-				{element.strDrink || element.drinkName}
-			</div>
+			<img
+				className='drink-thumbnail'
+				src={imageSrc(element)}
+				alt={`${element.strDrink}`}
+			/>
+			<div className='drink-name'>{element.strDrink || element.drinkName}</div>
 		</Link>
 	));
 
