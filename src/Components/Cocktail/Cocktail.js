@@ -52,8 +52,8 @@ function Cocktail(props) {
 
 	const mappedIngredients = ingredients.map((element, index) => (
 		<div key={index} className='ingredients'>
-			<h4>{element.ingredientName} </h4>
-			<p> &nbsp;{`${element.ingredientMeasure}` || ''}</p>
+			{element.ingredientName && <h4>{element.ingredientName} </h4>}
+			{element.ingredientMeasure && <p> &nbsp;: {element.ingredientMeasure} </p>}
 		</div>
 	));
 
@@ -119,6 +119,7 @@ function Cocktail(props) {
 				<div>
 					<h3 className='ingr-list'>List of ingredients:</h3>
 					{mappedIngredients}
+					<p className='instructions'>{details.strInstructions}</p>
 				</div>
 				{!included
 					? details.strDrink &&
@@ -151,7 +152,7 @@ function Cocktail(props) {
 							</button>
 					  )}
 			</div>
-			<p className='instructions'>{details.strInstructions}</p>
+
 			<br />
 		</div>
 	);

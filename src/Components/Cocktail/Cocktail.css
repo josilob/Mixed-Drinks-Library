@@ -13,11 +13,10 @@
 
 .drink-card {
 	width: 460px;
-	margin: 0 auto;
-	margin-top: 3%;
+	margin: 0 auto 5vh;
 	border-radius: 255px 15px 225px 15px/20px 225px 35px 255px;
 	border: solid 5px white;
-	padding: 20px;
+	padding: 0.5rem;
 }
 
 .handle-post__btn {
@@ -65,10 +64,9 @@
 .instructions {
 	font-size: 22px;
 	margin: 0 auto;
-	margin-bottom: 15px;
-	padding: 35px 0;
+	padding: 0.5rem 0 1rem;
 	font-family: 'Fredericka the Great';
-	width: 45%;
+	/* width: 45%; */
 }
 @media screen and (max-width: 769px) {
 	.instructions {
