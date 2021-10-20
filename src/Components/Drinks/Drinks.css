@@ -60,10 +60,14 @@
 	background-color: #242222;
 	transform: translateY(-3rem);
 	font-family: 'Fredericka the Great';
+	text-transform: capitalize;
+	transition: outline 0.5s ease;
 }
+
 .drinks-intro button:hover {
 	cursor: pointer;
-	transform: scale(0.98);
+	outline: 3px solid #000;
+	/* transform: scale(0.98); */
 }
 
 #searchBar {

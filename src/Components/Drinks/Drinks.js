@@ -152,7 +152,7 @@ function Drinks(props) {
 								fetchCollection(userID);
 								setTimeout(scrollToDrinks, 350);
 							}}>
-							{user}'s collection
+							{user}'s Favorites
 						</button>
 					</div>
 				)}
