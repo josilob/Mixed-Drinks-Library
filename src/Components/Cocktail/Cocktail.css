@@ -63,17 +63,15 @@
 	font-family: 'Fredericka the Great';
 }
 .instructions {
-	font-size: 22px;
+	font-size: clamp(0.75rem, 1rem + 0.75vmin, 1.25rem);
 	margin: 0 auto;
 	padding: 0.5rem 0 1rem;
 	font-family: 'Fredericka the Great';
-	/* width: 45%; */
+	text-align: justify;
+	width: 90%;
 }
-@media screen and (max-width: 769px) {
-	.instructions {
-		width: 70%;
-	}
 
+@media screen and (max-width: 769px) {
 	.drink-card {
 		width: 95%;
 		max-width: 400px;
@@ -98,10 +96,8 @@
 	}
 	.instructions {
 		font-size: 18px;
-		width: 60vh;
+		width: 95%;
 		margin: 0 auto;
-		margin-bottom: 15px;
 		padding: 35px 0;
-		width: 65%;
 	}
 }

@@ -74,9 +74,7 @@ function Drinks(props) {
 			const { data } = await axios(
 				`https://mdl-server.herokuapp.com/drinks/get/${id}`
 			);
-			// console.log(data);
 			setDrinksData(data);
-			// console.log(drinksData);
 		} catch (err) {
 			console.log(err.message);
 		}
