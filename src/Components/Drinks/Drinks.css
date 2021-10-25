@@ -9,6 +9,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	overflow: hidden;
+	flex-grow: 1;
 }
 .drinks-intro {
 	text-align: center;
