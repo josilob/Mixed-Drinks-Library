@@ -25,7 +25,7 @@ function Cocktail(props) {
 	// console.log(details);
 
 	const urlBase = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
-	const backendUrl = 'https://mdl-server.herokuapp.com/';
+	const backendUrl = 'https://mdl-server.vercel.app/';
 	// const backendUrl = 'http://localhost:27017/';
 
 	const addDrink = async (newDrink) => {
@@ -61,7 +61,7 @@ function Cocktail(props) {
 		try {
 			// const { data } = await axios(`http://localhost:27017/drinks/get/${id}`);
 			const { data } = await axios(
-				`https://mdl-server.herokuapp.com/drinks/get/${id}`
+				`https://mdl-server.vercel.app/drinks/get/${id}`
 			);
 			setCollection(data);
 		} catch (err) {

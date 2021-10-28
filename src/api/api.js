@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'https://mdl-server.herokuapp.com/' });
+const API = axios.create({ baseURL: 'https://mdl-server.vercel.app/' });
 // const API = axios.create({ baseURL: 'http://localhost:27017/' });
 
 API.interceptors.request.use((req) => {
