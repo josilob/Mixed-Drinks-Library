@@ -111,6 +111,7 @@ function Drinks(props) {
 				state: { idDrink: element.idDrink }
 			}}>
 			<img
+				loading='lazy'
 				className='drink-thumbnail'
 				src={imageSrc(element)}
 				alt={`${element.strDrink}`}

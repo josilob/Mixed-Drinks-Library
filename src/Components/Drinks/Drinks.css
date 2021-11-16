@@ -1,7 +1,7 @@
 .Drinks {
 	display: grid;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-		url('../../images/drinks-about.jpeg');
+		url('../../images/drinks-about.jpg');
 	background-position: center;
 	min-height: calc(100vh - 92px);
 	min-width: 100%;
